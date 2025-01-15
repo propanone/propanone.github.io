@@ -9,7 +9,9 @@
     <link rel="shortcut icon" href="./assets/rocket.png"/>
 </head>
 <body>
-    <audio src="./assets/funnyhaha.mp3" autoplay ></audio> <!--loop ??--> 
+
+  <body>
+    <audio id="audio-player" src="./assets/funnyhaha.mp3"></audio>  
     <nav id="desktop-nav">
         <div class="logo"></div>
         <div>
@@ -18,9 +20,25 @@
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contacts</a></li>
-                <li><a href="blog.html"target="_blank">Blog</a></li>
+                
                 <li><a href="https://propanonegarden.vercel.app/"target="_blank">Visit my garden.</a></li>
             </ul>
+        </div>
+         <!-- Audio Play Button -->
+        <div style="text-align: center; margin: 20px;">
+          <button id="start-button" style="
+                padding: 10px 20px; 
+                font-size: 18px; 
+                font-weight: bold; 
+                border: none; 
+                border-radius: 5px; 
+                background-color: #4CAF50; 
+                color: white; 
+                cursor: pointer; 
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
+                transition: transform 0.2s, box-shadow 0.2s;">
+            Don't Click
+          </button>
         </div>
     </nav>
     <nav id="hamburger-nav">
@@ -36,6 +54,8 @@
           <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
           <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
           <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+          <li><a href="https://propanonegarden.vercel.app/"target="_blank" onclick="toggleMenu()">Visit my garden.</a></li>
+
         </div>
       </div>
     </nav>
@@ -355,17 +375,53 @@
               <li><a href="#experience">Experience</a></li>
               <li><a href="#projects">Projects</a></li>
               <li><a href="#contact">Contact</a></li>
-              <li><a href="blog.html"target="_blank">Blog</a></li>
               <li><a href="https://propanonegarden.vercel.app/"target="_blank">Visit my garden.</a></li>
             </ul>
           </div>
         </nav>
         <p>Copyright &#169; 2023 WK. All Rights Reserved.</p>
       </footer>
+      <script>
+        const audio = document.querySelector('#audio-player');
+        const startButton = document.querySelector('#start-button');
+    
+        // Enable audio playback when button is clicked
+        const enableAudio = () => {
+          startButton.style.display = "none"; // Hide button after clicking
+          startButton.disabled = true; // Disable button after clicking
+    
+          // Allow audio to play on scroll or other interactions
+          const playAudio = () => {
+            if (audio.paused) {
+              audio.play().catch((error) => console.error('Audio play failed:', error));
+            }
+          };
+    
+          // Add event listeners for various interactions
+          window.addEventListener('scroll', playAudio);
+          window.addEventListener('wheel', playAudio);
+          window.addEventListener('touchmove', playAudio);
+          window.addEventListener('keydown', playAudio);
+        };
+    
+        // Attach click event to button
+        startButton.addEventListener('click', enableAudio);
+    
+        // Hover effects for button
+        startButton.addEventListener('mouseover', () => {
+          startButton.style.transform = 'scale(1.1)';
+          startButton.style.boxShadow = '0 6px 8px rgba(0, 0, 0, 0.3)';
+        });
+        startButton.addEventListener('mouseout', () => {
+          startButton.style.transform = 'scale(1)';
+          startButton.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.2)';
+        });
+      </script>
     <script src="script.js"></script>
     <script
     type="module"
     src="https://cdn.jsdelivr.net/npm/@bufferhead/nightowl@0.0.14/dist/nightowl.js"
 ></script>
+
 </body>
 </html>
