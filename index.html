@@ -383,60 +383,68 @@
       </footer>
       <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const audio = document.querySelector('#audio-player');
-            const startButton = document.querySelector('#start-button');
-    
-            // Button positioning function
-            const updateButtonPosition = () => {
-              const buttonHeight = startButton.clientHeight;
-              const buttonWidth = startButton.clientWidth;
-              const viewportHeight = window.innerHeight;
-              const viewportWidth = window.innerWidth;
+        const audio = document.querySelector('#audio-player');
+        const startButton = document.querySelector('#start-button');
+        let hoverCount = 0;
+        
+        // Button positioning function
+        const updateButtonPosition = () => {
+          const buttonHeight = startButton.clientHeight;
+          const buttonWidth = startButton.clientWidth;
+          const viewportHeight = window.innerHeight;
+          const viewportWidth = window.innerWidth;
 
-              const randomX = Math.random() * (viewportWidth - buttonWidth);
-              const randomY = Math.random() * (viewportHeight - buttonHeight);
+          const randomX = Math.random() * (viewportWidth - buttonWidth);
+          const randomY = Math.random() * (viewportHeight - buttonHeight);
 
-              startButton.style.position = 'fixed';
-              startButton.style.top = `${randomY}px`;
-              startButton.style.left = `${randomX}px`;
-            };
-    
-            // Initial positioning
+          startButton.style.position = 'fixed';
+          startButton.style.top = `${randomY}px`;
+          startButton.style.left = `${randomX}px`;
+        };
+        
+        // Initial positioning
+        updateButtonPosition();
+        
+        // Reposition on scroll and resize
+        window.addEventListener('scroll', updateButtonPosition);
+        window.addEventListener('resize', updateButtonPosition);
+        
+        let audioPlayed = false;
+        
+        // Audio playback handler
+        const enableAudio = () => {
+            if (!audioPlayed) {
+            audio.play()
+            .then(() => {
+                audioPlayed = true;
+                startButton.style.display = 'none';
+            })
+            .catch(error => console.error('Audio play failed:', error));
+            }
+        };
+        
+        // Button click event
+        startButton.addEventListener('click', enableAudio);
+        
+        // Hover effects
+        startButton.addEventListener('mouseover', () => {
+            if (hoverCount < 3) {
             updateButtonPosition();
-    
-            // Reposition on scroll and resize
-            window.addEventListener('scroll', updateButtonPosition);
-            window.addEventListener('resize', updateButtonPosition);
-    
-            let audioPlayed = false;
-    
-            // Audio playback handler
-            const enableAudio = () => {
-                if (!audioPlayed) {
-                    audio.play()
-                        .then(() => {
-                            audioPlayed = true;
-                            startButton.style.display = 'none';
-                        })
-                        .catch(error => console.error('Audio play failed:', error));
-                }
-            };
-    
-            // Button click event
-            startButton.addEventListener('click', enableAudio);
-    
-            // Hover effects
-            startButton.addEventListener('mouseover', () => {
-                startButton.style.transform = 'scale(1.1)';
-                startButton.style.boxShadow = '0 6px 8px rgba(0, 0, 0, 0.3)';
-            });
-    
-            startButton.addEventListener('mouseout', () => {
-                startButton.style.transform = 'scale(1)';
-                startButton.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.2)';
-            });
+            hoverCount++;
+            } else {
+            startButton.style.transform = 'scale(1.1)';
+            startButton.style.boxShadow = '0 6px 8px rgba(0, 0, 0, 0.3)';
+            }
         });
-    </script>
+        
+        startButton.addEventListener('mouseout', () => {
+            if (hoverCount >= 3) {
+            startButton.style.transform = 'scale(1)';
+            startButton.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.2)';
+            }
+        });
+        });
+        </script>
     <script src="script.js"></script>
     <script
     type="module"
