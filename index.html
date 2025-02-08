@@ -1,455 +1,450 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>W</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="mediaqueries.css" />
-    <link rel="shortcut icon" href="./assets/rocket.png"/>
-</head>
-<body>
-
-  <body>
-    <audio id="audio-player" src="./assets/funnyhaha.mp3"></audio>  
-    <nav id="desktop-nav">
-        <div class="logo"></div>
-        <div>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contacts</a></li>
-                <li><a href="https://propanonegarden.vercel.app/"target="_blank">Visit my garden.</a></li>
-            </ul>
-        </div>
-         <!-- Audio Play Button -->
-
-        <div style="text-align: center; margin: 20px;">
-          <button id="start-button" style="
-          padding: 10px 20px; 
-          font-size: 18px; 
-          font-weight: bold; 
-          border: none; 
-          border-radius: 5px; 
-          background-color: #4CAF50; 
-          color: white; 
-          cursor: pointer; 
-          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
-          transition: transform 0.2s, box-shadow 0.2s;">
-      Don't Click
-    </button>
-        </div>
-    </nav>
-    <nav id="hamburger-nav">
-        <div class="logo">Walid Kessoum</div>
-        <div class="hamburger-menu">
-          <div class="hamburger-icon" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <div class="menu-links">
-            <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-          <li><a href="https://propanonegarden.vercel.app/"target="_blank" onclick="toggleMenu()">Visit my garden.</a></li>
-
-        </div>
-      </div>
-    </nav>
-    <section id="profile">
-            <div class="section__pic-container">
-              <img src="./assets/Photo.png" alt="Walid's profile picture" />
-            </div>
-            <div class="section__text">
-                <p class="section__text__p1">Hello, I'm</p>
-                <h1 class="title">Walid</h1>
-                <p class="section__text__p2">Telecommunication and Networking Systems Enginnering Student</p>
-                <div class="btn-container">
-                  <button
-                    class="btn btn-color-2"
-                    onclick="window.open('./assets/resume.pdf')"
- >
-                    Download CV
-                  </button>
-                  <button class="btn btn-color-1" onclick="location.href='./#contact'">
-                    Contact Info
-                  </button>
-                </div>
-                <div id="socials-container">
-                  <img
-                    src="./assets/linkedin.png"
-                    alt="My LinkedIn profile"
-                    class="icon"
-                    onclick="location.href='https://www.linkedin.com/in/propanonne/'"
-                  />
-                  <img
-                    src="./assets/github.png"
-                    alt="My Github profile"
-                    class="icon"
-                    onclick="location.href='https://github.com/propanone'"
-                  />
-                </div>
-              </div>
-    </section>
-    <section id="about">
-        <p class="section__text__p1">Get To Know More</p>
-        <h1 class="title">About Me</h1>
-       <div class="section-container">
-           <!-- <div class="section__pic-container">
-            <img
-              src="./assets/about-pic.jpg"
-              alt="Profile picture"
-              class="about-pic"
-            />
-          </div> -->
-          <div class="about-details-container">
-            <div class="about-containers">
-              <div class="details-container">
-                <img
-                  src="./assets/experience.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <h3>Experience</h3>
-                <p>Internship at Algerie Telecom <br />Internship at SONATRACH SPA </p> 
-              </div>
-              <div class="details-container">
-                <img
-                  src="./assets/education.png"
-                  alt="Education icon"
-                  class="icon"
-                />
-                <h3>Education</h3>
-                <p>Final year Electrical Engineering Student<br />2020-2025 National Higher School of Advanced Technologies </p>
-              </div>
-            </div>
-            <div class="text-container">
-              <p>
-                <!--Excuse me, Sir ! I'm looking for a job, in fact, I've made up my mind to find a career that I can learn and grow
-                into. Who am I ? I'm a hard worker. I set high goals, and I've been told that I'm persistent.Now I'm not fooling myself sir, having
-                been raised with a self-esteem movement. What I
-                believe sir, is that good things come to those who work their asses off, and that good people such as yourself who reached
-                the top of the mountain didn't just fall there. My motto is if you want to win the
-                lottery you have to make the money to buy a ticket. You have to make the money to buy a ticket ! You have to make the
-                money to buy a ticket !!!! <a href="https://www.youtube.com/watch?v=x48m7w9boo0"target="_blank"> -->
-                 My motto is if you want to win the
-                lottery you have to make the money to buy a ticket. You have to make the money to buy a ticket ! You have to make the
-                money to buy a ticket !!!!      
-           
-                  
-                <br>            
-              </p>
-            </div>
-          </div>
-        </div>
-        <img
-          src="./assets/arrow.png"
-          alt="Arrow icon"
-          class="icon arrow"
-          onclick="location.href='./#experience'"
-        />
-      </section>
-
-      <section id="experience">
-        <p class="section__text__p1">Explore My</p>
-        <h1 class="title">Skills</h1>
-        <div class="experience-details-container">
-          <div class="about-containers">
-            <div class="details-container">
-              <h2 class="experience-sub-title">Dev</h2>
-              <div class="article-container">
-                <article>
-                  <img
-                    src="./assets/checkmark.png"
-                    alt="Experience icon"
-                    class="icon"
-                  />
-                  <div>
-                    <h3>HTML/CSS/JS</h3>
-                    <p>Intermediate</p>
-                  </div>
-                </article>
-                <article>
-                  <img
-                    src="./assets/checkmark.png"
-                    alt="Experience icon"
-                    class="icon"
-                  />
-                  <div>
-                    <h3>Python</h3>
-                    <p>Intermediate</p>
-                  </div>
-                </article>
-                <article>
-                  <img
-                    src="./assets/checkmark.png"
-                    alt="Experience icon"
-                    class="icon"
-                  />
-                  <div>
-                    <h3>C/C++</h3>
-                    <p>Intermediate</p>
-                  </div>
-                </article>
-                <article>
-                  <img
-                    src="./assets/checkmark.png"
-                    alt="Experience icon"
-                    class="icon"
-                  />
-                  <div>
-                    <h3>MySQL</h3>
-                    <p>Intermediate</p>
-                  </div>
-                </article>
-                <article>
-                  <img
-                    src="./assets/checkmark.png"
-                    alt="Experience icon"
-                    class="icon"
-                  />
-                  <div>
-                    <h3>Matlab/HFSS/Packet Tracer</h3>
-                    <p>Intermediate</p>
-                  </div>
-                </article>
-               <!--<article>
-                  <img
-                    src="./assets/checkmark.png"
-                    alt="Experience icon"
-                    class="icon"
-                  />
-                  <div>
-                    <h3>Photoshop/Premiere</h3>
-                    <p>Intermediate</p>
-                  </div>
-                </article>-->
-              </div>
-            </div>
-            <div class="details-container">
-              <h2 class="experience-sub-title"> Certificats </h2>
-              <div class="article-container">
-                <article>
-                  <img
-                    src="./assets/checkmark.png"
-                    alt="Experience icon"
-                    class="icon"
-                  />
-                  <div>
-                
-                    <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/NLH32S5SAHKF"><h3>Google IT Support</h3></a>
-                  </div>
-                  
-                </article>
-                <article>
-                  <img
-                    src="./assets/checkmark.png"
-                    alt="Experience icon"
-                    class="icon"
-                  />
-                  <div>
-                    <a href="https://www.coursera.org/account/accomplishments/specialization/6TJ953DM2D2Hs"><h3>Google Cybersecurity</h3></a>
-                  </div>
-                </article>
-                <article>
-                  <img
-                    src="./assets/checkmark.png"
-                    alt="Experience icon"
-                    class="icon"
-                  />
-                  <div>
-                    <a href="https://www.coursera.org/account/accomplishments/specialization/PK8KQCDZX4D5"><h3>Google IT Automation with Python</h3></a>
-                  </div>
-                </article>
-                <article>
-                  <img
-                    src="./assets/checkmark.png"
-                    alt="Experience icon"
-                    class="icon"
-                  />
-                  <div>
-                    <a href="https://www.cloudskillsboost.google/public_profiles/1fea1716-e395-45a3-8c3b-ee0d7d0a19d0/badges/2907494"><h3>Google Cloud Engineering</h3></a>
-                  </div>
-                </article>
-              </div>
-            </div>
-          </div>
-        </div>
-        <img
-          src="./assets/arrow.png"
-          alt="Arrow icon"
-          class="icon arrow"
-          onclick="location.href='./#projects'"
-        />
-      </section>
-
-      <section id="projects">
-        <p class="section__text__p1">Browse My Recent</p>
-        <h1 class="title">Projects</h1>
-        <div class="experience-details-container">
-          <div class="about-containers">
-            <!--<div class="details-container color-container">
-              <div class="article-container">
-                <img
-                  src="./assets/project-1.jpg"
-                  alt="Project 1"
-                  class="project-img"
-                />
-              </div>
-              <h2 class="experience-sub-title project-title">This website :3</h2>
-              <div class="btn-container">
-                <button
-                  class="btn btn-color-2 project-btn"
-                  onclick="location.href='https://github.com/propanone/propanone.github.io'"
-                >
-                  Github
-                </button>
-                <button
-                  class="btn btn-color-2 project-btn"
-                  onclick="location.href='https://propanone.github.io/'"
-                >
-                  Live Demo
-                </button>
-              </div>
-            </div>-->
-            <div class="details-container color-container">
-              <div class="article-container">
-                <img
-                  src="./assets/project-1.jpg"
-                  alt="Project 2"
-                  class="project-img"
-                />
-              </div>
-              <h2 class="experience-sub-title project-title">Check my Github</h2>
-              <div class="btn-container">
-                <button
-                  class="btn btn-color-2 project-btn"
-                  onclick="location.href='https://github.com/propanone'"
-                >
-                  Github
-                </button>
-               
-              </div>
-            </div>
-           
-          </div>
-        </div>
-        <img
-          src="./assets/arrow.png"
-          alt="Arrow icon"
-          class="icon arrow"
-          onclick="location.href='./#contact'"
-        />
-      </section>
-
-      <section id="contact">
-        <p class="section__text__p1">Get in Touch</p>
-        <h1 class="title">Contact Me</h1>
-        <div class="contact-info-upper-container">
-          <div class="contact-info-container">
-            <img
-              src="./assets/email.png"
-              alt="Email icon"
-              class="icon contact-icon email-icon"
-            />
-            <p><a href="mailto:m_kessoum@ensta.edu.dz">m_kessoum@ensta.edu.dz</a></p>
-          </div>
-          <div class="contact-info-container">
-            <img
-              src="./assets/linkedin.png"
-              alt="LinkedIn icon"
-              class="icon contact-icon"
-            />
-            <p><a href="https://www.linkedin.com/in/propanonne/">LinkedIn</a></p>
-          </div>
-        </div>
-      </section>
-      <footer>
-        <nav>
-          <div class="nav-links-container">
-            <ul class="nav-links">
-              <li><a href="#about">About</a></li>
-              <li><a href="#experience">Experience</a></li>
-              <li><a href="#projects">Projects</a></li>
-              <li><a href="#contact">Contact</a></li>
-              <li><a href="https://propanonegarden.vercel.app/"target="_blank">Visit my garden.</a></li>
-            </ul>
-          </div>
-        </nav>
-        <p>Copyright &#169; 2023 WK. All Rights Reserved.</p>
-      </footer>
-      <script>
-        document.addEventListener('DOMContentLoaded', () => {
-        const audio = document.querySelector('#audio-player');
-        const startButton = document.querySelector('#start-button');
-        let hoverCount = 0;
+    <head>
+        <title>Main</title>
+        <link rel="icon" href="assets/favicon.png" type="image/x-icon"/>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1"/>
+        <meta name="color-scheme" content="light only"/>
+        <meta name="description" content="Math"/>
+        <meta property="og:site_name" content="Walid Kessoum"/>
+        <meta property="og:title" content="Walid Kessoum"/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:image:type" content="image/jpeg"/>
+        <meta property="og:image:width" content="1280"/>
+        <meta property="og:image:height" content="800"/>
+        <meta property="twitter:card" content="summary_large_image"/>
+        <link href="https://fonts.googleapis.com/css2?display=swap&family=Crimson+Text:ital,wght@0,400;0,700;1,400;1,700&family=Inter:ital,wght@0,700;1,700" rel="stylesheet" type="text/css"/>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+        <link rel="stylesheet" href="styles.css"/>
         
-        // Button positioning function
-        const updateButtonPosition = () => {
-          const buttonHeight = startButton.clientHeight;
-          const buttonWidth = startButton.clientWidth;
-          const viewportHeight = window.innerHeight;
-          const viewportWidth = window.innerWidth;
+    </head>
+    <body class="is-loading">
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 40 40" display="none" width="0" height="0">
+            <symbol id="icon-67ad41ecc66a1b1cd00d0d3b20c00017" viewBox="0 0 40 40">
+                <path d="M34.1,19.9c0,0.3-0.1,0.3-0.1,0.4L21.3,33.1c-0.1,0.1-0.1,0.1-0.4,0.1c-0.3,0-0.3-0.1-0.4-0.1L19,31.6 c-0.1-0.1-0.1-0.1-0.1-0.4s0.1-0.3,0.1-0.4l9.2-9.2H5.8c-0.1,0-0.2,0-0.2,0c0,0,0,0,0,0c-0.1-0.1-0.1-0.2-0.1-0.4v-2.5 c0-0.2,0.1-0.4,0.1-0.5c0,0,0.1,0,0.2,0h22.4L19,9c-0.1-0.1-0.1-0.1-0.1-0.4c0-0.3,0.1-0.3,0.1-0.4l1.5-1.5c0.1-0.1,0.1-0.1,0.4-0.1 c0.3,0,0.3,0.1,0.4,0.1L34,19.5C34,19.6,34.1,19.6,34.1,19.9z"/>
+            </symbol>
+            <symbol id="icon-85976685de3e4af37529a1ce5d57d2a7" viewBox="0 0 40 40">
+                <path d="M20,7c4.2,0,4.7,0,6.3,0.1c1.5,0.1,2.3,0.3,3,0.5C30,8,30.5,8.3,31.1,8.9c0.5,0.5,0.9,1.1,1.2,1.8c0.2,0.5,0.5,1.4,0.5,3 C33,15.3,33,15.8,33,20s0,4.7-0.1,6.3c-0.1,1.5-0.3,2.3-0.5,3c-0.3,0.7-0.6,1.2-1.2,1.8c-0.5,0.5-1.1,0.9-1.8,1.2 c-0.5,0.2-1.4,0.5-3,0.5C24.7,33,24.2,33,20,33s-4.7,0-6.3-0.1c-1.5-0.1-2.3-0.3-3-0.5C10,32,9.5,31.7,8.9,31.1 C8.4,30.6,8,30,7.7,29.3c-0.2-0.5-0.5-1.4-0.5-3C7,24.7,7,24.2,7,20s0-4.7,0.1-6.3c0.1-1.5,0.3-2.3,0.5-3C8,10,8.3,9.5,8.9,8.9 C9.4,8.4,10,8,10.7,7.7c0.5-0.2,1.4-0.5,3-0.5C15.3,7.1,15.8,7,20,7z M20,4.3c-4.3,0-4.8,0-6.5,0.1c-1.6,0-2.8,0.3-3.8,0.7 C8.7,5.5,7.8,6,6.9,6.9C6,7.8,5.5,8.7,5.1,9.7c-0.4,1-0.6,2.1-0.7,3.8c-0.1,1.7-0.1,2.2-0.1,6.5s0,4.8,0.1,6.5 c0,1.6,0.3,2.8,0.7,3.8c0.4,1,0.9,1.9,1.8,2.8c0.9,0.9,1.7,1.4,2.8,1.8c1,0.4,2.1,0.6,3.8,0.7c1.6,0.1,2.2,0.1,6.5,0.1 s4.8,0,6.5-0.1c1.6-0.1,2.9-0.3,3.8-0.7c1-0.4,1.9-0.9,2.8-1.8c0.9-0.9,1.4-1.7,1.8-2.8c0.4-1,0.6-2.1,0.7-3.8 c0.1-1.6,0.1-2.2,0.1-6.5s0-4.8-0.1-6.5c-0.1-1.6-0.3-2.9-0.7-3.8c-0.4-1-0.9-1.9-1.8-2.8c-0.9-0.9-1.7-1.4-2.8-1.8 c-1-0.4-2.1-0.6-3.8-0.7C24.8,4.3,24.3,4.3,20,4.3L20,4.3L20,4.3z"/>
+                <path d="M20,11.9c-4.5,0-8.1,3.7-8.1,8.1s3.7,8.1,8.1,8.1s8.1-3.7,8.1-8.1S24.5,11.9,20,11.9z M20,25.2c-2.9,0-5.2-2.3-5.2-5.2 s2.3-5.2,5.2-5.2s5.2,2.3,5.2,5.2S22.9,25.2,20,25.2z"/>
+                <path d="M30.6,11.6c0,1-0.8,1.9-1.9,1.9c-1,0-1.9-0.8-1.9-1.9s0.8-1.9,1.9-1.9C29.8,9.7,30.6,10.5,30.6,11.6z"/>
+            </symbol>
+            <symbol id="icon-8c4b37645de3c276d895d87df51ba614" viewBox="0 0 40 40">
+                <path d="M36,20.3c0,3.5-1,6.6-3.1,9.4c-2,2.8-4.7,4.7-7.9,5.8c-0.4,0.1-0.6,0-0.8-0.1c-0.2-0.2-0.3-0.4-0.3-0.6v-4.4 c0-1.3-0.4-2.3-1.1-3c0.8-0.1,1.5-0.2,2.1-0.4c0.6-0.2,1.3-0.4,2-0.8c0.7-0.4,1.2-0.8,1.7-1.4c0.5-0.5,0.8-1.3,1.1-2.2 s0.4-2,0.4-3.1c0-1.7-0.5-3.1-1.6-4.3c0.5-1.3,0.5-2.7-0.2-4.2c-0.4-0.1-1,0-1.7,0.2c-0.7,0.3-1.4,0.6-1.9,0.9L24,12.5 c-1.3-0.4-2.6-0.5-4-0.5s-2.7,0.2-4,0.5c-0.2-0.2-0.5-0.3-0.9-0.6c-0.4-0.2-0.9-0.5-1.7-0.8c-0.8-0.3-1.4-0.4-1.8-0.3 c-0.6,1.6-0.7,3-0.1,4.2c-1.1,1.2-1.6,2.6-1.6,4.3c0,1.2,0.1,2.2,0.4,3.1s0.6,1.6,1.1,2.2s1,1,1.7,1.4c0.7,0.4,1.3,0.6,2,0.8 c0.6,0.2,1.3,0.3,2.1,0.4c-0.6,0.5-0.9,1.2-1,2.1c-0.3,0.1-0.6,0.2-0.9,0.3c-0.3,0.1-0.7,0.1-1.2,0.1c-0.5,0-0.9-0.1-1.4-0.4 c-0.5-0.3-0.8-0.7-1.2-1.3c-0.3-0.4-0.6-0.8-1-1.1c-0.4-0.3-0.8-0.4-1-0.5L9,26.5c-0.3,0-0.5,0-0.6,0.1c-0.1,0.1-0.1,0.1-0.1,0.2 c0,0.1,0.1,0.2,0.2,0.3c0.1,0.1,0.2,0.2,0.3,0.2l0.1,0.1c0.3,0.1,0.6,0.4,0.9,0.8s0.5,0.7,0.7,1.1l0.2,0.5c0.2,0.5,0.5,1,0.9,1.3 c0.4,0.3,0.9,0.5,1.4,0.6c0.5,0.1,1,0.1,1.4,0.1c0.5,0,0.9,0,1.2-0.1l0.5-0.1c0,0.5,0,1.1,0,1.9c0,0.7,0,1.1,0,1.1 c0,0.2-0.1,0.5-0.3,0.6c-0.2,0.2-0.5,0.2-0.8,0.1c-3.2-1.1-5.8-3-7.9-5.8S4,23.8,4,20.3c0-2.9,0.7-5.6,2.1-8S9.5,7.8,12,6.4 s5.1-2.1,8-2.1s5.6,0.7,8,2.1s4.4,3.4,5.8,5.8S36,17.4,36,20.3L36,20.3z"/>
+            </symbol>
+            <symbol id="icon-bf393d6ea48a4e69e1ed58a3563b94a5" viewBox="0 0 40 40">
+                <path d="M12.1,13.8v19.1H5.7V13.8C5.7,13.8,12.1,13.8,12.1,13.8z M12.5,7.9c0,0.9-0.3,1.7-1,2.4c-0.7,0.6-1.5,0.9-2.6,0.9h0 c-1.1,0-1.9-0.3-2.5-0.9c-0.6-0.6-1-1.4-1-2.4c0-1,0.3-1.7,1-2.4S7.9,4.6,9,4.6s1.9,0.3,2.6,0.9S12.5,6.9,12.5,7.9z M35,22v11h-6.4 V22.7c0-1.4-0.3-2.4-0.8-3.2c-0.5-0.8-1.3-1.1-2.4-1.1c-0.8,0-1.5,0.2-2,0.7c-0.5,0.4-1,1-1.2,1.7c-0.1,0.4-0.2,0.9-0.2,1.6v10.7 h-6.4c0-5.1,0-9.3,0-12.5s0-5.1,0-5.7l0-0.9H22v2.8h0c0.3-0.4,0.5-0.8,0.8-1.1c0.3-0.3,0.6-0.6,1.1-1c0.5-0.4,1-0.6,1.7-0.8 c0.7-0.2,1.4-0.3,2.2-0.3c2.2,0,4,0.7,5.3,2.2C34.4,17,35,19.1,35,22L35,22z"/>
+            </symbol>
+            <symbol id="icon-email" viewBox="0 0 40 40">
+                <circle cx="20" cy="20" r="16" stroke="black" stroke-width="2" fill="none"/>
+                <path d="M13 15h14c1.1 0 2 .9 2 2v6c0 1.1-.9 2-2 2H13c-1.1 0-2-.9-2-2v-6c0-1.1.9-2 2-2zm0 2v1l7 4.5 7-4.5v-1l-7 4.5-7-4.5z"/>
+            </symbol>
+            
 
-          const randomX = Math.random() * (viewportWidth - buttonWidth);
-          const randomY = Math.random() * (viewportHeight - buttonHeight);
+        </svg>
+        <!-- Audio Element -->
+        <audio id="audio-player" src="assets/haha.mp3"></audio>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+            const audio = document.querySelector('#audio-player');
+            const startButton = document.querySelector('#start-button');
+            let hoverCount = 0;
 
-          startButton.style.position = 'fixed';
-          startButton.style.top = `${randomY}px`;
-          startButton.style.left = `${randomX}px`;
-        };
-        
-        // Initial positioning
-        updateButtonPosition();
-        
-        // Reposition on scroll and resize
-        window.addEventListener('scroll', updateButtonPosition);
-        window.addEventListener('resize', updateButtonPosition);
-        
-        let audioPlayed = false;
-        
-        // Audio playback handler
-        const enableAudio = () => {
-            if (!audioPlayed) {
-            audio.play()
-            .then(() => {
-                audioPlayed = true;
-                startButton.style.display = 'none';
-            })
-            .catch(error => console.error('Audio play failed:', error));
-            }
-        };
-        
-        // Button click event
-        startButton.addEventListener('click', enableAudio);
-        
-        // Hover effects
-        startButton.addEventListener('mouseover', () => {
-            if (hoverCount < 3) {
+            // Button positioning function (keeps it within the viewport)
+            const updateButtonPosition = () => {
+            const buttonHeight = startButton.clientHeight;
+            const buttonWidth = startButton.clientWidth;
+
+            const maxX = window.innerWidth - buttonWidth;
+            const maxY = window.innerHeight - buttonHeight;
+
+            const randomX = Math.random() * maxX;
+            const randomY = Math.random() * maxY;
+
+            startButton.style.top = `${randomY}px`;
+            startButton.style.left = `${randomX}px`;
+            };
+
+            // Initial positioning
             updateButtonPosition();
-            hoverCount++;
-            } else {
-            startButton.style.transform = 'scale(1.1)';
-            startButton.style.boxShadow = '0 6px 8px rgba(0, 0, 0, 0.3)';
-            }
-        });
-        
-        startButton.addEventListener('mouseout', () => {
-            if (hoverCount >= 3) {
-            startButton.style.transform = 'scale(1)';
-            startButton.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.2)';
-            }
-        });
-        });
-        </script>
-    <script src="script.js"></script>
-    <script
-    type="module"
-    src="https://cdn.jsdelivr.net/npm/@bufferhead/nightowl@0.0.14/dist/nightowl.js"
-></script>
 
-</body>
+            // Reposition on scroll and resize
+            window.addEventListener('scroll', updateButtonPosition);
+            window.addEventListener('resize', updateButtonPosition);
+
+            let audioPlayed = false;
+
+            // Audio playback handler
+            const enableAudio = () => {
+            if (!audioPlayed) {
+                audio.play()
+                .then(() => {
+                    audioPlayed = true;
+                    startButton.style.display = 'none';
+                })
+                .catch(error => console.error('Audio play failed:', error));
+            }
+            };
+
+            // Button click event
+            startButton.addEventListener('click', enableAudio);
+
+            // Hover effects
+            startButton.addEventListener('mouseover', () => {
+            if (hoverCount < 3) {
+                updateButtonPosition();
+                hoverCount++;
+            } else {
+                startButton.style.transform = 'scale(1.1)';
+                startButton.style.boxShadow = '0 6px 8px rgba(0, 0, 0, 0.3)';
+            }
+            });
+
+            startButton.addEventListener('mouseout', () => {
+            if (hoverCount >= 3) {
+                startButton.style.transform = 'scale(1)';
+                startButton.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.2)';
+            }
+            });
+        });
+          </script>
+          <!-- Floating Audio Play Button -->
+            <button id="start-button" style="
+            padding: 5px 10px; 
+            font-size: 10px; 
+            font-weight: bold; 
+            border: 1x solid black; 
+            border-radius: 5px; 
+            background-color: white; 
+            color: black; 
+            cursor: pointer; 
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
+            transition: transform 0.2s, box-shadow 0.2s;
+            position: fixed;
+            z-index: 9999;">
+            Don't Click
+            </button>
+
+        <div id="wrapper">
+            <div id="main">
+                
+                <div class="inner">
+                    <div id="container02" class="style3 container columns full screen">
+                        <div class="wrapper">
+                            <div class="inner" data-onvisible-trigger="1">
+                                <div>
+                                    <h1 id="text13" class="style1">
+                                        <span class="p">
+                                            Hello,<br/>My name is Walid.
+                                        </span>
+                                    </h1>
+                                    <p id="text14" class="style2">Communication and Networking Systems Final year Enginnering Student.</p>
+                                    <ul id="buttons13" class="style1 buttons">
+                                        <li>
+                                            <a href="resume/resume.pdf" class="button n01">
+                                                <svg aria-labelledby="icon-title">
+                                                    <title id="icon-title">Arrow Right (Light)</title>
+                                                    
+                                                </svg>
+                                                <span class="label">My resume</span>
+                                            </a>
+                                            <a href="https://propanonegarden.vercel.app/" class="button n01">
+                                                <svg aria-labelledby="icon-title">
+                                                    <title id="icon-title">Arrow Right (Light)</title>
+                                                    <use xlink:href="#icon-67ad41ecc66a1b1cd00d0d3b20c00017"></use>
+                                                </svg>
+                                                <span class="label">Explore Digital Garden</span>
+                                            </a>
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="container01" class="style1 container columns full screen">
+                        <div class="wrapper">
+                            <div class="inner" data-onvisible-trigger="1" data-reorder="0,1" data-reorder-breakpoint="medium">
+                                <div id="canvasholder">
+                                    <div class="style1">
+                                        <span class="frame">
+                                            <div id="encryptionDisplay"></div>
+                                        </span>
+                                    </div>
+                                    <!-- First load the animation code -->
+                                    <script src="encryptionAnimation.js"></script>
+                                    <!-- Then initialize the animation -->
+                                    <script>
+                                        document.addEventListener('DOMContentLoaded', function() {
+                                            createEncryptionAnimation(
+                                                'encryptionDisplay',
+                                                '/assets/original.bmp',
+                                                '/assets/encrypted.bmp'
+                                            );
+                                        });
+                                    </script>
+                                </div>
+                                <div>
+                                    <h2 id="text07" class="style3"> Image Encyption Implementation</h2>
+                                    <p id="text04" class="style2">In this project, we implement the Advanced Encryption Standard (AES) algorithm to encrypt and decrypt color images using Python.The aim is to secure image data and evaluate the performance and security of AES. The project explains how AES
+                                        works, including key transformations and modes of operation. Different AES modes
+                                        are tested, and their effectiveness is compared using tests such as histogram, correlation,
+                                     and entropy analysis. The project also checks how well AES resists certain
+                                        attacks, such as differential and known plaintext attacks. This work demonstrates
+                                        the practical use of AES for securing images.
+                                                                            </p>
+                                    <p class="style2">You can read the paper <a href="papers/AES Project Report.pdf">here.</a> Or, you could</p>
+                                    <ul id="buttons13" class="style1 buttons">
+                                        <li>
+                                            <a href="https://github.com/propanone/AES-Crypto" class="button n01">
+                                                <svg aria-labelledby="icon-title">
+                                                    <title id="icon-title">Arrow Right (Light)</title>
+                                                    <use xlink:href="#icon-67ad41ecc66a1b1cd00d0d3b20c00017"></use>
+                                                </svg>
+                                                <span class="label">Explore the source-code on Github.</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="container06" class="style1 container columns full screen">
+                        <div class="wrapper">
+                            <div class="inner" data-onvisible-trigger="1" data-reorder="1,0" data-reorder-breakpoint="medium">
+                                <div>
+                                    <h2 id="text11" class="style3"> Client Risk Assessment</h2>
+                                    <p id="text12" class="style2">This project predicts client risk using machine learning, analyzing client demographics, financial history, and vehicle details. It enhances risk evaluation, helping insurers optimize risk management and pricing strategies.
+                                        </p>
+                                    <ul id="buttons06" class="style1 buttons">
+                                        <li>
+                                            <a href="https://client-assessment.streamlit.app/" class="button n01">
+                                                <svg aria-labelledby="icon-title">
+                                                    <title id="icon-title">Arrow Right (Light)</title>
+                                                    <use xlink:href="#icon-67ad41ecc66a1b1cd00d0d3b20c00017"></use>
+                                                </svg>
+                                                <span class="label">Explore Demo</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <div id="image06" class="style1 image">
+                                        <span class="frame">
+                                            <img src="assets/network.svg" alt=""/>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="container04" class="style1 container columns full screen">
+                        <div class="wrapper">
+                            <div class="inner" data-onvisible-trigger="1" data-reorder="0,1" data-reorder-breakpoint="medium">
+                                <div>
+                                    <div id="image02" class="style1 image">
+                                        <span class="frame">
+                                            <img src="assets/library.png" alt=""/>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h2 id="text09" class="style3">Library Management using Django</h2>
+                                    <p id="text10" class="style2">This project is a web-based library management system developed with Django. It streamlines the handling of library operations by providing features for book inventory management, user administration, and tracking of issue/return transactions. The intuitive interface and robust backend make it an ideal solution for efficient library resource management.</p>
+                                    <ul id="buttons02" class="style1 buttons">
+                                        <li>
+                                            <a href="https://github.com/propanone/Library-Management-using-Django" class="button n01">
+                                                <svg aria-labelledby="icon-title">
+                                                    <title id="icon-title">Arrow Right (Light)</title>
+                                                    <use xlink:href="#icon-67ad41ecc66a1b1cd00d0d3b20c00017"></use>
+                                                </svg>
+                                                <span class="label">Explore the repository on Github
+                                                </span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--<div id="container06" class="style1 container columns full screen">
+                        <div class="wrapper">
+                            <div class="inner" data-onvisible-trigger="1" data-reorder="1,0" data-reorder-breakpoint="medium">
+                                <div>
+                                    <h2 id="text11" class="style3">1.4 Coupled Oscillator</h2>
+                                    <p id="text12" class="style2">One pendulum is harmonic. What about two that connect through a string? In this paper, I explore the dynamics of a coupled oscillator as you modify the string lengths.</p>
+                                    <ul id="buttons06" class="style1 buttons">
+                                        <li>
+                                            <a href="papers/coupledOscillator.pdf" class="button n01">
+                                                <svg aria-labelledby="icon-title">
+                                                    <title id="icon-title">Arrow Right (Light)</title>
+                                                    <use xlink:href="#icon-67ad41ecc66a1b1cd00d0d3b20c00017"></use>
+                                                </svg>
+                                                <span class="label">Read the Paper</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <div id="image06" class="style1 image">
+                                        <span class="frame">
+                                            <img src="https://www.electronicsteacher.com/succeed-in-physical-science/sound/soundbeat2.gif" alt=""/>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="container04" class="style1 container columns full screen">
+                        <div class="wrapper">
+                            <div class="inner" data-onvisible-trigger="1" data-reorder="0,1" data-reorder-breakpoint="medium">
+                                <div>
+                                    <div id="image02" class="style1 image">
+                                        <span class="frame">
+                                            <img src="images/logoGPT.png" alt=""/>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h2 id="text09" class="style3">1.5 ChatGPT Equation Copier</h2>
+                                    <p id="text10" class="style2">A chrome extension that copies the equation generated on ChatGPT into the equation format on Microsoft Word.</p>
+                                    <ul id="buttons02" class="style1 buttons">
+                                        <li>
+                                            <a href="https://chromewebstore.google.com/detail/gptcopy/ibnfnmnloecjgmephfokgmlppccheoed" class="button n01">
+                                                <svg aria-labelledby="icon-title">
+                                                    <title id="icon-title">Arrow Right (Light)</title>
+                                                    <use xlink:href="#icon-67ad41ecc66a1b1cd00d0d3b20c00017"></use>
+                                                </svg>
+                                                <span class="label">Install
+                                                </span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>-->
+                    <!-- <div id="container03" class="style3 container columns full screen">
+                        <div class="wrapper">
+                            <div class="inner" data-onvisible-trigger="1">
+                                <div>
+                                    <h2 id="text19" class="style1">2 Athletics</h2>
+                                    <p id="text20" class="style2">Sports are another passion I enjoy.</p>
+                                </div>
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="container09" class="style1 container columns full screen">
+                        <div class="wrapper">
+                            <div class="inner" data-onvisible-trigger="1" data-reorder="0,1" data-reorder-breakpoint="medium">
+                                <div>
+                                    <div id="image10" class="style1 image">
+                                        <span class="frame">
+                                            <img src="assets/images/image10.jpg?v=ea8f0bca" alt=""/>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h2 id="text21" class="style3">2.1 Badminton</h2>
+                                    <p id="text22" class="style2">Badminton is a sport I have enjoyed since I was very little. Playing this sport has lead me to meeting many new people that I enjoy spending time with.</p>
+                                    <ul id="buttons11" class="style1 buttons">
+                                        <li>
+                                            <a href="#" class="button n01">
+                                                <svg aria-labelledby="icon-title">
+                                                    <title id="icon-title">Arrow Right (Light)</title>
+                                                    <use xlink:href="#icon-67ad41ecc66a1b1cd00d0d3b20c00017"></use>
+                                                </svg>
+                                                <span class="label">Highlights</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="container05" class="style1 container columns full screen">
+                        <div class="wrapper">
+                            <div class="inner" data-onvisible-trigger="1" data-reorder="1,0" data-reorder-breakpoint="medium">
+                                <div>
+                                    <h2 id="text02" class="style3">2.2 Basketball</h2>
+                                    <p id="text01" class="style2">Basketball is a sport I love to compete in, getting the opportunity to connect to different worlds as meet new people and see great things on travel tournaments.</p>
+                                    <ul id="buttons01" class="style1 buttons">
+                                        <li>
+                                            <a href="#" class="button n01">
+                                                <svg aria-labelledby="icon-title">
+                                                    <title id="icon-title">Arrow Right (Light)</title>
+                                                    <use xlink:href="#icon-67ad41ecc66a1b1cd00d0d3b20c00017"></use>
+                                                </svg>
+                                                <span class="label">Highlights</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <div id="image01" class="style1 image">
+                                        <span class="frame">
+                                            <img src="assets/images/image01.jpg?v=ea8f0bca" alt=""/>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                    <div id="container07" class="style3 container columns full screen">
+                        <div class="wrapper">
+                            <div class="inner" data-onvisible-trigger="1">
+                                <div>
+                                    <h2 id="text03" class="style1">Contact</h2>
+                                    <p id="text08" class="style2">I am always excited to connect with others who share my passions.</p>
+                                    <ul id="icons01" class="icons">
+                                        <li>
+                                            <a class="n01" href="https://www.linkedin.com/in/propanonne">
+                                                <svg aria-labelledby="icon-title">
+                                                    <title id="icon-title">LinkedIn</title>
+                                                    <use xlink:href="#icon-bf393d6ea48a4e69e1ed58a3563b94a5"></use>
+                                                </svg>
+                                                <span class="label">LinkedIn</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="n02" href="https://github.com/propanone">
+                                                <svg aria-labelledby="icon-title">
+                                                    <title id="icon-title">GitHub</title>
+                                                    <use xlink:href="#icon-8c4b37645de3c276d895d87df51ba614"></use>
+                                                </svg>
+                                                <span class="label">GitHub</span>
+                                            </a>            
+                                        </li>
+                                        <li>
+                                            <a class="n03" href="mailto:m_kessoum@ensta.edu.dz">
+                                                <svg aria-labelledby="icon-title">
+                                                    <title id="icon-title-email">Email</title>
+                                                    <use xlink:href="#icon-email"></use>
+                                                </svg>
+                                                <span class="label">Email</span>
+                                            </a>
+                                        </li>
+                                        
+                                            <!-- <a class="n03" href="#">
+                                                <svg aria-labelledby="icon-title">
+                                                    <title id="icon-title">LinkedIn</title>
+                                                    <use xlink:href="#icon-bf393d6ea48a4e69e1ed58a3563b94a5"></use>
+                                                </svg>
+                                                <span class="label">LinkedIn</span>
+                                            </a> -->
+                                        
+                                    </ul>
+                                </div>
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="module" src="https://cdn.jsdelivr.net/npm/@bufferhead/nightowl@0.0.14/dist/nightowl.js"></script>
+        <script src="scripts.js"></script>
+    </body>
 </html>
