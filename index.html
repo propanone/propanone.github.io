@@ -109,7 +109,7 @@
         });
           </script>
           <!-- Floating Audio Play Button -->
-            <button id="start-button" style="
+           <!-- <button id="start-button" style="
             padding: 5px 10px; 
             font-size: 10px; 
             font-weight: bold; 
@@ -123,7 +123,7 @@
             position: fixed;
             z-index: 9999;">
             Don't Click
-            </button>
+            </button> -->
 
         <div id="wrapper">
             <div id="main">
@@ -141,14 +141,15 @@
                                     <p id="text14" class="style2">Communication and Networking Systems Final year Enginnering Student.</p>
                                     <ul id="buttons13" class="style1 buttons">
                                         <li>
-                                            <a href="resume/resume.pdf" class="button n01">
+                                            <a href="resume/resume.pdf" target="_blank" class="button n01">
                                                 <svg aria-labelledby="icon-title">
                                                     <title id="icon-title">Arrow Right (Light)</title>
+                                                    <line x1="0" y1="20" x2="40" y2="20" stroke="black" stroke-width="2" transform="translate(0, 10)"/>
                                                     
                                                 </svg>
                                                 <span class="label">My resume</span>
                                             </a>
-                                            <a href="https://propanone.netlify.app/" class="button n01">
+                                            <a href="https://propanone.netlify.app/" target="_blank" class="button n01">
                                                 <svg aria-labelledby="icon-title">
                                                     <title id="icon-title">Arrow Right (Light)</title>
                                                     <use xlink:href="#icon-67ad41ecc66a1b1cd00d0d3b20c00017"></use>
@@ -163,6 +164,8 @@
                             </div>
                         </div>
                     </div>
+                    <h1 class="style1" style="text-align: center; font-family: 'Crimson Text', serif; font-size: 40px; margin-top: 20px; margin-bottom: 10px;">My Recent Projects</h1>
+                   
                     <div id="container01" class="style1 container columns full screen">
                         <div class="wrapper">
                             <div class="inner" data-onvisible-trigger="1" data-reorder="0,1" data-reorder-breakpoint="medium">
@@ -194,10 +197,10 @@
                                         attacks, such as differential and known plaintext attacks. This work demonstrates
                                         the practical use of AES for securing images.
                                                                             </p>
-                                    <p class="style2">You can read the paper <a href="papers/AES Project Report.pdf">here.</a> Or, you could</p>
+                                    <p class="style2">You can read the paper <a href="papers/AES Project Report.pdf" target="_blank" >here.</a> Or, you could</p>
                                     <ul id="buttons13" class="style1 buttons">
                                         <li>
-                                            <a href="https://github.com/propanone/AES-Crypto" class="button n01">
+                                            <a href="https://github.com/propanone/AES-Crypto"  target="_blank" class="button n01">
                                                 <svg aria-labelledby="icon-title">
                                                     <title id="icon-title">Arrow Right (Light)</title>
                                                     <use xlink:href="#icon-67ad41ecc66a1b1cd00d0d3b20c00017"></use>
@@ -219,7 +222,7 @@
                                         </p>
                                     <ul id="buttons06" class="style1 buttons">
                                         <li>
-                                            <a href="https://client-assessment.streamlit.app/" class="button n01">
+                                            <a href="https://client-assessment.streamlit.app/" target="_blank" class="button n01">
                                                 <svg aria-labelledby="icon-title">
                                                     <title id="icon-title">Arrow Right (Light)</title>
                                                     <use xlink:href="#icon-67ad41ecc66a1b1cd00d0d3b20c00017"></use>
@@ -230,11 +233,12 @@
                                     </ul>
                                 </div>
                                 <div>
-                                    <div id="image06" class="style1 image">
+                                    <div id="image06" class="style1 image" style="width: 100%; height: auto; display: flex; justify-content: center;">
                                         <span class="frame">
-                                            <img src="assets/network.svg" alt=""/>
+                                            <img src="assets/net.png" alt="" style="max-width: 600px; width: 100%; height: auto;"/>
                                         </span>
                                     </div>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -254,7 +258,7 @@
                                     <p id="text10" class="style2">This project is a web-based library management system developed with Django. It streamlines the handling of library operations by providing features for book inventory management, user administration, and tracking of issue/return transactions. The intuitive interface and robust backend make it an ideal solution for efficient library resource management.</p>
                                     <ul id="buttons02" class="style1 buttons">
                                         <li>
-                                            <a href="https://github.com/propanone/Library-Management-using-Django" class="button n01">
+                                            <a href="https://github.com/propanone/Library-Management-using-Django" target="_blank" class="button n01">
                                                 <svg aria-labelledby="icon-title">
                                                     <title id="icon-title">Arrow Right (Light)</title>
                                                     <use xlink:href="#icon-67ad41ecc66a1b1cd00d0d3b20c00017"></use>
@@ -400,7 +404,7 @@
                                     <p id="text08" class="style2">I am always excited to connect with others who share my passions.</p>
                                     <ul id="icons01" class="icons">
                                         <li>
-                                            <a class="n01" href="https://www.linkedin.com/in/propanonne">
+                                            <a class="n01" href="https://www.linkedin.com/in/propanonne" target="_blank">
                                                 <svg aria-labelledby="icon-title">
                                                     <title id="icon-title">LinkedIn</title>
                                                     <use xlink:href="#icon-bf393d6ea48a4e69e1ed58a3563b94a5"></use>
@@ -409,7 +413,7 @@
                                             </a>
                                         </li>
                                         <li>
-                                            <a class="n02" href="https://github.com/propanone">
+                                            <a class="n02" href="https://github.com/propanone" target="_blank">
                                                 <svg aria-labelledby="icon-title">
                                                     <title id="icon-title">GitHub</title>
                                                     <use xlink:href="#icon-8c4b37645de3c276d895d87df51ba614"></use>
@@ -446,5 +450,6 @@
         </div>
         <script type="module" src="https://cdn.jsdelivr.net/npm/@bufferhead/nightowl@0.0.14/dist/nightowl.js"></script>
         <script src="scripts.js"></script>
+    
     </body>
 </html>

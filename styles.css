@@ -191,6 +191,7 @@ transition: opacity 0.25s ease-in-out 0s;
 }
 
 #main > .inner {
+    
 --padding-horizontal: 8rem;
 --padding-vertical: 8rem;
 --spacing: 2rem;
@@ -203,6 +204,9 @@ z-index: 1;
 padding: var(--padding-vertical) var(--padding-horizontal);
 }
 
+
+
+}
 #main > .inner > * {
 margin-top: var(--spacing);
 margin-bottom: var(--spacing);
@@ -1594,3 +1598,9 @@ transition: none !important;
 filter: none !important;
 }
    
+
+#image06 img {
+    max-width: 800px !important;
+    width: 100% !important;
+    height: auto !important;
+}
