@@ -11,7 +11,7 @@ const ProjectsSection = () => {
   const { t } = useLanguage();
 
   return (
-    <section id="projects" className="py-24">
+    <section id="projects" className="border-b-2 border-border py-24">
       <div className="mx-auto max-w-6xl px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -20,7 +20,7 @@ const ProjectsSection = () => {
           className="mb-12 text-center"
         >
           <h2 className="mb-3 text-3xl font-bold md:text-4xl">{t.projects.title}</h2>
-          <p className="text-muted-foreground">{t.projects.subtitle}</p>
+          <p className="text-xl text-muted-foreground">{t.projects.subtitle}</p>
         </motion.div>
 
         <div className="grid gap-6 md:grid-cols-2">
@@ -34,9 +34,9 @@ const ProjectsSection = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="card-glass rounded-xl p-6"
+                className="card-glass p-6"
               >
-                <div className="mb-4 inline-flex h-16 w-16 items-center justify-center overflow-hidden rounded-lg border border-border/80 bg-white p-2">
+                <div className="mb-4 inline-flex h-16 w-16 items-center justify-center overflow-hidden border-2 border-border bg-white p-2">
                   <img
                     src={withBase(meta?.visual ?? defaultPortfolioIcon)}
                     alt={`${project.name} visual`}
@@ -45,14 +45,14 @@ const ProjectsSection = () => {
                 </div>
 
                 <h3 className="mb-2 text-lg font-semibold">{project.name}</h3>
-                {meta?.oneLiner && <p className="mb-3 text-sm font-medium text-primary/90">{meta.oneLiner}</p>}
-                <p className="mb-4 text-sm leading-relaxed text-muted-foreground">{project.description}</p>
+                {meta?.oneLiner && <p className="mb-3 text-base font-medium text-primary/90">{meta.oneLiner}</p>}
+                <p className="mb-4 text-base leading-relaxed text-muted-foreground">{project.description}</p>
 
                 <div className="mb-4 flex flex-wrap gap-2">
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="inline-flex items-center rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-xs text-primary"
+                      className="pixel-chip"
                     >
                       {tag}
                     </span>
@@ -65,12 +65,12 @@ const ProjectsSection = () => {
                       href={meta.github}
                       target="_blank"
                       rel="noreferrer"
-                      className="inline-flex rounded-md border border-primary/40 bg-primary/10 px-3 py-1.5 text-xs text-primary"
+                      className="pixel-btn-secondary px-3 py-1"
                     >
                       GitHub repository
                     </a>
                   ) : (
-                    <span className="inline-flex rounded-md border border-border px-3 py-1.5 text-xs text-muted-foreground">
+                    <span className="pixel-chip">
                       Add GitHub repository link
                     </span>
                   )}
@@ -81,7 +81,7 @@ const ProjectsSection = () => {
                       href={withBase(resource.url)}
                       target="_blank"
                       rel="noreferrer"
-                      className="inline-flex rounded-md border border-primary/40 bg-primary/10 px-3 py-1.5 text-xs text-primary"
+                      className="pixel-btn-secondary px-3 py-1"
                     >
                       {resource.label}
                     </a>

@@ -14,7 +14,7 @@ const ExperienceSection = () => {
 
   return (
     <>
-      <section id="experience" className="py-24">
+      <section id="experience" className="border-b-2 border-border py-24">
         <div className="mx-auto max-w-6xl px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -23,7 +23,7 @@ const ExperienceSection = () => {
             className="mb-12 text-center"
           >
             <h2 className="mb-3 text-3xl font-bold md:text-4xl">{t.experience.title}</h2>
-            <p className="text-muted-foreground">{t.experience.subtitle}</p>
+            <p className="text-xl text-muted-foreground">{t.experience.subtitle}</p>
           </motion.div>
 
           <div className="space-y-6">
@@ -37,7 +37,7 @@ const ExperienceSection = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1 }}
-                  className="card-glass rounded-xl p-6"
+                  className="card-glass p-6"
                 >
                   <div className="flex gap-4">
                     <div className="org-logo overflow-hidden bg-white p-1">
@@ -53,12 +53,12 @@ const ExperienceSection = () => {
                           <h3 className="font-semibold">{item.role}</h3>
                           <p className="text-primary">{item.company}</p>
                         </div>
-                        <p className="text-sm text-muted-foreground">{item.location} • {item.period}</p>
+                        <p className="text-base text-muted-foreground">{item.location} • {item.period}</p>
                       </div>
                       <ul className="space-y-2">
                         {item.tasks.map((task, j) => (
-                          <li key={j} className="flex gap-2 text-sm text-muted-foreground">
-                            <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary" />
+                          <li key={j} className="flex gap-2 text-base text-muted-foreground">
+                            <span className="mt-2 h-2 w-2 flex-shrink-0 border border-primary bg-primary" />
                             {task}
                           </li>
                         ))}
@@ -71,7 +71,7 @@ const ExperienceSection = () => {
                               href={withBase(doc.url)}
                               target="_blank"
                               rel="noreferrer"
-                              className="inline-flex rounded-md border border-primary/40 bg-primary/10 px-3 py-1.5 text-xs text-primary"
+                              className="pixel-btn-secondary px-3 py-1"
                             >
                               {doc.label}
                             </a>
@@ -87,7 +87,7 @@ const ExperienceSection = () => {
         </div>
       </section>
 
-      <section id="certifications" className="py-24">
+      <section id="certifications" className="border-b-2 border-border py-24">
         <div className="mx-auto max-w-6xl px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -96,7 +96,7 @@ const ExperienceSection = () => {
             className="mb-12 text-center"
           >
             <h2 className="mb-3 text-3xl font-bold md:text-4xl">Certifications</h2>
-            <p className="text-muted-foreground">Recognized achievements and professional credentials</p>
+            <p className="text-xl text-muted-foreground">Recognized achievements and professional credentials</p>
           </motion.div>
           <div className="space-y-4">
             {certificationItems.map((cert, i) => (
@@ -106,7 +106,7 @@ const ExperienceSection = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="card-glass rounded-xl p-6"
+                className="card-glass p-6"
               >
                 <div className="flex items-start gap-4">
                   <div className="org-logo overflow-hidden bg-white p-1">
@@ -122,14 +122,14 @@ const ExperienceSection = () => {
                         <h3 className="text-lg font-semibold">{cert.name}</h3>
                         <span className="text-sm text-primary">{cert.badge}</span>
                       </div>
-                      <span className="text-sm text-muted-foreground">{cert.date}</span>
+                      <span className="text-base text-muted-foreground">{cert.date}</span>
                     </div>
-                    <p className="mb-2 text-sm text-muted-foreground">{cert.details}</p>
+                    <p className="mb-2 text-base text-muted-foreground">{cert.details}</p>
                     <a
                       href={withBase(cert.certUrl)}
                       target="_blank"
                       rel="noreferrer"
-                      className="inline-flex rounded-md border border-primary/40 bg-primary/10 px-3 py-1.5 text-xs text-primary"
+                      className="pixel-btn-secondary px-3 py-1"
                     >
                       View certificate
                     </a>

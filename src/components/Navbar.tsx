@@ -13,9 +13,9 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed left-0 right-0 top-0 z-50 border-b border-border/70 bg-background/65 backdrop-blur-2xl">
+    <nav className="fixed left-0 right-0 top-0 z-50 border-b-2 border-border bg-background/95">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <button onClick={() => scrollTo("hero")} className="text-xl font-bold tracking-tight">
+        <button onClick={() => scrollTo("hero")} className="pixel-small text-foreground">
           Walid <span className="text-gradient">K.</span>
         </button>
 
@@ -25,20 +25,20 @@ const Navbar = () => {
             <button
               key={key}
               onClick={() => scrollTo(key)}
-              className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
+              className="pixel-small text-muted-foreground transition-colors hover:text-primary"
             >
               {t.nav[key]}
             </button>
           ))}
           <button
             onClick={() => scrollTo("contact")}
-            className="rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground shadow-[0_8px_24px_-14px_hsl(var(--primary))] transition-transform hover:-translate-y-0.5"
+            className="pixel-btn"
           >
             {t.nav.contact}
           </button>
           <button
             onClick={() => setLang(lang === "fr" ? "en" : "fr")}
-            className="rounded-md border border-border/80 bg-secondary/40 px-3 py-2 text-sm text-muted-foreground transition-colors hover:text-primary"
+            className="pixel-btn-secondary"
           >
             {lang === "fr" ? "FR -> EN" : "EN -> FR"}
           </button>
@@ -48,13 +48,13 @@ const Navbar = () => {
         <div className="flex items-center gap-4 md:hidden">
           <button
             onClick={() => setLang(lang === "fr" ? "en" : "fr")}
-            className="rounded-md border border-border/80 bg-secondary/40 px-2 py-1.5 text-xs text-muted-foreground"
+            className="pixel-btn-secondary px-2 py-1"
           >
             {lang === "fr" ? "FR -> EN" : "EN -> FR"}
           </button>
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="rounded-md border border-border/80 bg-secondary/40 px-3 py-1.5 text-sm text-foreground"
+            className="pixel-btn-secondary px-3 py-1"
           >
             {isOpen ? "Close" : "Menu"}
           </button>
@@ -62,19 +62,19 @@ const Navbar = () => {
       </div>
 
       {isOpen && (
-        <div className="border-t border-border bg-card/95 px-6 py-4 backdrop-blur md:hidden">
+        <div className="border-t-2 border-border bg-card px-6 py-4 md:hidden">
           {navItems.map((key) => (
             <button
               key={key}
               onClick={() => scrollTo(key)}
-              className="block w-full rounded-md px-2 py-3 text-left text-muted-foreground transition-colors hover:bg-secondary/60 hover:text-primary"
+              className="pixel-small block w-full border-2 border-transparent px-2 py-3 text-left text-muted-foreground transition-colors hover:border-border hover:text-primary"
             >
               {t.nav[key]}
             </button>
           ))}
           <button
             onClick={() => scrollTo("contact")}
-            className="mt-2 w-full rounded-lg bg-primary py-3 text-center font-medium text-primary-foreground"
+            className="pixel-btn mt-2 w-full"
           >
             {t.nav.contact}
           </button>

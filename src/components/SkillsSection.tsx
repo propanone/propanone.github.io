@@ -24,7 +24,7 @@ const categoryDescriptions = {
 
 const SkillBadge = ({ name }: { name: string }) => {
   return (
-    <span className="inline-flex items-center rounded-md border border-border bg-secondary px-3 py-2 text-xs text-secondary-foreground">
+    <span className="pixel-chip">
       {name}
     </span>
   );
@@ -44,7 +44,7 @@ const SkillsSection = () => {
           className="mb-12 text-center"
         >
           <h2 className="mb-3 text-3xl font-bold md:text-4xl">{t.skills.title}</h2>
-          <p className="text-muted-foreground">{t.skills.subtitle}</p>
+          <p className="text-xl text-muted-foreground">{t.skills.subtitle}</p>
         </motion.div>
 
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -57,10 +57,10 @@ const SkillsSection = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.08 }}
-                className="card-glass rounded-xl p-6"
+                className="card-glass p-6"
               >
                 <h3 className="mb-3 font-semibold text-primary">{cat.title}</h3>
-                <p className="mb-4 text-sm text-muted-foreground">
+                <p className="mb-4 text-base text-muted-foreground">
                   {categoryDescriptions[lang][key]}
                 </p>
                 <div className="flex flex-wrap gap-2">

@@ -31,10 +31,10 @@ export const educationLogoBySchoolKeyword: Record<string, string> = {
 
 export const experienceLogoByCompany: Record<string, string> = {
   Djezzy: "favicon.png",
-  "Huawei ICT Competition": "favicon.png",
-  "Djezzy (partenariat Huawei & MajestEYE)": "favicon.png",
-  "Djezzy (Huawei & MajestEYE partnership)": "favicon.png",
-  SONATRACH: "favicon.png",
+  "Huawei ICT Competition": "icons/experience/huawei.png",
+  "Djezzy (partenariat Huawei & MajestEYE)": "icons/experience/huawei.png",
+  "Djezzy (Huawei & MajestEYE partnership)": "icons/experience/huawei.png",
+  SONATRACH: "icons/experience/sonatrach.svg",
   "Algerie Telecom": "favicon.png",
   "Algérie Télécom": "favicon.png",
 };
@@ -79,7 +79,7 @@ export const certificationItems: PortfolioCertification[] = [
     date: "2024",
     details:
       "International ICT competition with global recognition for technical excellence in network and cloud innovation.",
-    icon: "favicon.png",
+    icon: "icons/certifications/huawei.png",
     certUrl: "huawei-ict-competition-certificate.pdf",
   },
   {
@@ -179,7 +179,7 @@ export const projectMetaByName: Record<string, PortfolioProjectMeta> = {
   "Analyse Réseau SCADA/VoIP": {
     oneLiner: "Industrial network analysis project with reliability and latency diagnostics.",
     github: "https://github.com/propanone/scada-voip-analysis",
-    visual: "favicon.png",
+    visual: "icons/experience/sonatrach.svg",
     resources: [
       { label: "Project report (PDF)", url: "rapport-stage-sonatrach.pdf" },
       { label: "Technical documentation", url: "rapport-stage-sonatrach.pdf" },
@@ -189,7 +189,7 @@ export const projectMetaByName: Record<string, PortfolioProjectMeta> = {
   "SCADA/VoIP Network Analysis": {
     oneLiner: "Industrial network analysis project with reliability and latency diagnostics.",
     github: "https://github.com/propanone/scada-voip-analysis",
-    visual: "favicon.png",
+    visual: "icons/experience/sonatrach.svg",
     resources: [
       { label: "Project report (PDF)", url: "rapport-stage-sonatrach.pdf" },
       { label: "Technical documentation", url: "rapport-stage-sonatrach.pdf" },
