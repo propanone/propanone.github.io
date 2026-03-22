@@ -1,32 +1,10 @@
 import { useLanguage } from "@/i18n/LanguageContext";
 import { motion } from "framer-motion";
-import { MapPin, Calendar } from "lucide-react";
-import supGalileeLogo from "../assests/logos/sup-galilee.png";
-
-const schoolColors: Record<string, string> = {
-  "Sup Galilée": "#003366",
-  "Sorbonne": "#003366",
-  "ENSTA": "#1B4F72",
-  "ESSA": "#8B0000",
-};
-
-const schoolLogos: Record<string, string> = {
-  "Sup Galilée": supGalileeLogo,
-};
-
-const getSchoolColor = (name: string) => {
-  for (const key in schoolColors) {
-    if (name.includes(key)) return schoolColors[key];
-  }
-  return "hsl(var(--primary))";
-};
-
-const getInitials = (name: string) => {
-  // Extract acronym-like initials
-  if (name.includes("Sup Galilée")) return "SG";
-  if (name.includes("ENSTA")) return "EN";
-  if (name.includes("ESSA")) return "ES";
-  return name.split(/[\s–]+/).filter(w => w.length > 1).slice(0, 2).map(w => w[0]).join("").toUpperCase();
+const schoolPlaceholders: Record<string, string> = {
+  "Sup Galilée": "public/icons/education/sup-galilee.png",
+  "Sorbonne": "public/icons/education/sorbonne-paris-nord.png",
+  "ENSTA": "public/icons/education/ensta.png",
+  "ESSA": "public/icons/education/essa.png",
 };
 
 const EducationSection = () => {
@@ -47,9 +25,8 @@ const EducationSection = () => {
 
         <div className="space-y-6">
           {t.education.items.map((item, i) => {
-            const color = getSchoolColor(item.school);
-            const logoKey = Object.keys(schoolLogos).find((key) => item.school.includes(key));
-            const logo = logoKey ? schoolLogos[logoKey] : null;
+            const placeholder = Object.entries(schoolPlaceholders).find(([key]) => item.school.includes(key))?.[1]
+              ?? "public/icons/education/replace-me.png";
             return (
               <motion.div
                 key={i}
@@ -60,25 +37,16 @@ const EducationSection = () => {
                 className="card-glass rounded-xl p-6"
               >
                 <div className="flex gap-4">
-                  {logo ? (
-                    <div className="org-logo bg-white">
-                      <img src={logo} alt={item.school} className="h-9 w-9 object-contain" />
-                    </div>
-                  ) : (
-                    <div
-                      className="org-logo text-xs font-bold"
-                      style={{ backgroundColor: color + "25", color: color }}
-                    >
-                      {getInitials(item.school)}
-                    </div>
-                  )}
+                  <div className="org-logo text-[10px] font-semibold uppercase tracking-wide text-primary">
+                    Icon
+                  </div>
                   <div className="flex-1">
                     <h3 className="mb-1 font-semibold">{item.degree}</h3>
                     <p className="mb-2 text-primary">{item.school}</p>
-                    <div className="flex flex-wrap gap-4 text-sm text-muted-foreground">
-                      <span className="flex items-center gap-1"><MapPin className="h-3.5 w-3.5" /> {item.location}</span>
-                      <span className="flex items-center gap-1"><Calendar className="h-3.5 w-3.5" /> {item.period}</span>
-                    </div>
+                    <p className="mb-2 text-sm text-muted-foreground">{item.location} • {item.period}</p>
+                    <p className="text-xs text-muted-foreground">
+                      Placeholder file: <span className="font-mono">{placeholder}</span>
+                    </p>
                     {"note" in item && item.note && (
                       <p className="mt-2 text-sm italic text-primary/80">{item.note}</p>
                     )}

@@ -1,6 +1,5 @@
 import { useLanguage } from "@/i18n/LanguageContext";
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, Download, Github, Linkedin } from "lucide-react";
 import profileImg from "@/assests/profile.jpg";
 
 const HeroSection = () => {
@@ -31,14 +30,14 @@ const HeroSection = () => {
           <p className="mb-6 max-w-2xl text-base text-muted-foreground md:text-lg">- {t.hero.subtitle2}</p>
 
           <div className="mb-8 flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
-            <a href="mailto:mw.kessoum@icloud.com" className="flex items-center gap-1.5 transition-colors hover:text-primary">
-              <Mail className="h-4 w-4" /> mw.kessoum@icloud.com
+            <a href="mailto:mw.kessoum@icloud.com" className="transition-colors hover:text-primary">
+              Email: mw.kessoum@icloud.com
             </a>
-            <a href="tel:+33746505437" className="flex items-center gap-1.5 transition-colors hover:text-primary">
-              <Phone className="h-4 w-4" /> +33 7 46 50 54 37
+            <a href="tel:+33746505437" className="transition-colors hover:text-primary">
+              Phone: +33 7 46 50 54 37
             </a>
-            <span className="flex items-center gap-1.5">
-              <MapPin className="h-4 w-4" /> {t.hero.location}
+            <span>
+              Location: {t.hero.location}
             </span>
           </div>
 
@@ -48,7 +47,7 @@ const HeroSection = () => {
               id="contact"
               className="inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 font-semibold text-primary-foreground shadow-[0_16px_44px_-20px_hsl(var(--primary))] transition-transform hover:-translate-y-0.5"
             >
-              <Mail className="h-4 w-4" /> {t.hero.contact}
+              {t.hero.contact}
             </a>
             <a
               href={`${import.meta.env.BASE_URL}cv.pdf#view=FitH`}
@@ -56,16 +55,16 @@ const HeroSection = () => {
               rel="noreferrer"
               className="inline-flex items-center gap-2 rounded-lg border border-border bg-secondary/70 px-6 py-3 font-semibold text-secondary-foreground transition-colors hover:border-primary/50 hover:bg-secondary"
             >
-              <Download className="h-4 w-4" /> {t.hero.cv}
+              {t.hero.cv}
             </a>
           </div>
 
-          <div className="flex items-center gap-4 pt-2">
-            <a href="https://github.com/propanone" target="_blank" rel="noreferrer" className="text-muted-foreground transition-colors hover:text-primary">
-              <Github className="h-5 w-5" />
+          <div className="flex flex-wrap items-center gap-4 pt-2 text-sm text-muted-foreground">
+            <a href="https://github.com/propanone" target="_blank" rel="noreferrer" className="transition-colors hover:text-primary">
+              GitHub
             </a>
-            <a href="https://linkedin.com/in/walid-kessoum" target="_blank" rel="noreferrer" className="text-muted-foreground transition-colors hover:text-primary">
-              <Linkedin className="h-5 w-5" />
+            <a href="https://linkedin.com/in/walid-kessoum" target="_blank" rel="noreferrer" className="transition-colors hover:text-primary">
+              LinkedIn
             </a>
           </div>
         </motion.div>

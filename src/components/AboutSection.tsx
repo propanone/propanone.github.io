@@ -1,8 +1,5 @@
 import { useLanguage } from "@/i18n/LanguageContext";
 import { motion } from "framer-motion";
-import { Wifi, Database, Brain, Code2 } from "lucide-react";
-
-const icons = { networks: Wifi, data: Database, ai: Brain, dev: Code2 };
 
 const AboutSection = () => {
   const { t } = useLanguage();
@@ -35,7 +32,6 @@ const AboutSection = () => {
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {cardKeys.map((key, i) => {
-            const Icon = icons[key];
             const card = t.about.cards[key];
             return (
               <motion.div
@@ -46,8 +42,8 @@ const AboutSection = () => {
                 transition={{ duration: 0.4, delay: i * 0.1 }}
                 className="card-glass rounded-xl p-6 text-center"
               >
-                <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">
-                  <Icon className="h-6 w-6 text-primary" />
+                <div className="mx-auto mb-4 flex h-10 w-10 items-center justify-center rounded-full border border-primary/30 bg-primary/10 text-sm font-semibold text-primary">
+                  {String(i + 1).padStart(2, "0")}
                 </div>
                 <h3 className="mb-2 font-semibold">{card.title}</h3>
                 <p className="text-sm text-muted-foreground">{card.desc}</p>

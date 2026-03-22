@@ -1,6 +1,5 @@
 import { useLanguage } from "@/i18n/LanguageContext";
 import { useState } from "react";
-import { Menu, X, Globe } from "lucide-react";
 
 const navItems = ["about", "education", "experience", "projects", "skills"] as const;
 
@@ -39,10 +38,9 @@ const Navbar = () => {
           </button>
           <button
             onClick={() => setLang(lang === "fr" ? "en" : "fr")}
-            className="flex items-center gap-1.5 rounded-md border border-border/80 bg-secondary/40 px-3 py-2 text-sm text-muted-foreground transition-colors hover:text-primary"
+            className="rounded-md border border-border/80 bg-secondary/40 px-3 py-2 text-sm text-muted-foreground transition-colors hover:text-primary"
           >
-            <Globe className="h-4 w-4" />
-            {lang === "fr" ? "EN" : "FR"}
+            {lang === "fr" ? "FR -> EN" : "EN -> FR"}
           </button>
         </div>
 
@@ -50,12 +48,15 @@ const Navbar = () => {
         <div className="flex items-center gap-4 md:hidden">
           <button
             onClick={() => setLang(lang === "fr" ? "en" : "fr")}
-            className="rounded-md border border-border/80 bg-secondary/40 p-2 text-muted-foreground"
+            className="rounded-md border border-border/80 bg-secondary/40 px-2 py-1.5 text-xs text-muted-foreground"
           >
-            <Globe className="h-5 w-5" />
+            {lang === "fr" ? "FR -> EN" : "EN -> FR"}
           </button>
-          <button onClick={() => setIsOpen(!isOpen)} className="rounded-md border border-border/80 bg-secondary/40 p-2 text-foreground">
-            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="rounded-md border border-border/80 bg-secondary/40 px-3 py-1.5 text-sm text-foreground"
+          >
+            {isOpen ? "Close" : "Menu"}
           </button>
         </div>
       </div>

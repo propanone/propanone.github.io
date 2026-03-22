@@ -1,96 +1,59 @@
-# Welcome to your Lovable project
+# Walid Kessoum Portfolio
 
-## Project info
+Personal portfolio built with React, TypeScript, Vite, and Tailwind CSS.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## Run Locally
 
-## How can I edit this code?
-
-There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+```bash
+npm install
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+## Build
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```bash
+npm run build
+npm run preview
+```
 
-**Use GitHub Codespaces**
+## Deploy to GitHub Pages
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+This repository deploys automatically with GitHub Actions.
 
-## What technologies are used for this project?
+1. Open repository Settings -> Pages.
+2. Set Source to GitHub Actions.
+3. Push to main.
+4. The workflow at .github/workflows/deploy-pages.yml builds and deploys dist/.
 
-This project is built with:
+## Content Placeholders
 
-- Vite
+The UI contains explicit placeholder paths for logos and visuals:
+
+- Education logos: public/icons/education/
+- Experience/company logos: public/icons/experience/
+- Certification logos: public/icons/certifications/
+- Project visuals: public/icons/projects/
+
+Create those folders under public/icons/ and add your files with the names shown directly in each card on the website.
+
+## Documents and Project Links
+
+Project cards include slots for:
+
+- GitHub repository
+- Project report PDF
+- Technical documentation
+- Stage report / internship report
+- Master thesis PDF
+- PFE thesis PDF
+- Certification links
+
+Update the placeholder URLs in src/components/ProjectsSection.tsx and src/components/ExperienceSection.tsx.
+
+## Tech Stack
+
+- React 18
 - TypeScript
-- React
-- shadcn-ui
+- Vite
 - Tailwind CSS
-
-## How can I deploy this project?
-
-This repo is configured to deploy to GitHub Pages using GitHub Actions.
-
-### One-time setup
-
-1. Go to your repository on GitHub.
-2. Open **Settings -> Pages**.
-3. Set **Source** to **GitHub Actions**.
-
-### Deploy flow
-
-1. Push changes to the `main` branch.
-2. The workflow at `.github/workflows/deploy-pages.yml` will:
-	 - install dependencies,
-	 - build the app with Vite,
-	 - deploy the `dist/` folder to GitHub Pages.
-3. After the workflow completes, refresh your GitHub Pages URL.
-
-### Notes
-
-- Local development uses `npm run dev`.
-- Production deploy uses `npm run build`.
-- The Vite `base` is configured in `vite.config.ts` to work for both:
-	- user pages repos like `username.github.io`, and
-	- project pages repos like `username.github.io/repo-name`.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+- Framer Motion
