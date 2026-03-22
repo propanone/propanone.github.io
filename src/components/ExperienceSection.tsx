@@ -1,53 +1,13 @@
 import { useLanguage } from "@/i18n/LanguageContext";
 import { motion } from "framer-motion";
+import {
+  certificationItems,
+  defaultPortfolioIcon,
+  experienceDocumentsByCompany,
+  experienceLogoByCompany,
+} from "@/data/portfolioContent";
 
-const companyPlaceholders: Record<string, string> = {
-  Djezzy: "public/icons/experience/djezzy.png",
-  "Huawei ICT Competition": "public/icons/experience/huawei-ict.png",
-  "Djezzy (partenariat Huawei & MajestEYE)": "public/icons/experience/djezzy-majesteye.png",
-  "Djezzy (Huawei & MajestEYE partnership)": "public/icons/experience/djezzy-majesteye.png",
-  SONATRACH: "public/icons/experience/sonatrach.png",
-  "Algérie Télécom": "public/icons/experience/algerie-telecom.png",
-};
-
-const certifications = [
-  {
-    name: "Huawei ICT Competition",
-    badge: "Global Winner (3rd Prize)",
-    date: "2024",
-    details:
-      "International ICT competition with global recognition for technical excellence in network and cloud innovation.",
-    placeholder: "public/icons/certifications/huawei-ict.png",
-    certUrl: "#",
-  },
-  {
-    name: "Google Cybersecurity",
-    badge: "Professional Certificate",
-    date: "2024",
-    details:
-      "Hands-on training in threat detection, incident response, network security, and SIEM workflows.",
-    placeholder: "public/icons/certifications/google-cybersecurity.png",
-    certUrl: "#",
-  },
-  {
-    name: "Google IT Automation with Python",
-    badge: "Professional Certificate",
-    date: "2024",
-    details:
-      "Practical automation with Python for system administration, scripting, and DevOps tasks.",
-    placeholder: "public/icons/certifications/google-it-automation-python.png",
-    certUrl: "#",
-  },
-  {
-    name: "Google Cloud Engineering",
-    badge: "Professional Certificate",
-    date: "2024",
-    details:
-      "Cloud architecture and deployment practices with managed services and observability principles.",
-    placeholder: "public/icons/certifications/google-cloud-engineering.png",
-    certUrl: "#",
-  },
-] as const;
+const withBase = (path: string) => `${import.meta.env.BASE_URL}${path}`;
 
 const ExperienceSection = () => {
   const { t } = useLanguage();
@@ -68,7 +28,8 @@ const ExperienceSection = () => {
 
           <div className="space-y-6">
             {t.experience.items.map((item, i) => {
-              const placeholder = companyPlaceholders[item.company] ?? "public/icons/experience/replace-me.png";
+              const placeholder = experienceLogoByCompany[item.company] ?? defaultPortfolioIcon;
+              const docs = experienceDocumentsByCompany[item.company] ?? [];
               return (
                 <motion.div
                   key={i}
@@ -79,7 +40,13 @@ const ExperienceSection = () => {
                   className="card-glass rounded-xl p-6"
                 >
                   <div className="flex gap-4">
-                    <div className="org-logo text-[10px] font-semibold uppercase tracking-wide text-primary">Icon</div>
+                    <div className="org-logo overflow-hidden bg-white p-1">
+                      <img
+                        src={withBase(placeholder)}
+                        alt={`${item.company} icon`}
+                        className="h-9 w-9 rounded-md object-contain"
+                      />
+                    </div>
                     <div className="flex-1">
                       <div className="mb-3 flex flex-wrap items-start justify-between gap-2">
                         <div>
@@ -88,9 +55,6 @@ const ExperienceSection = () => {
                         </div>
                         <p className="text-sm text-muted-foreground">{item.location} • {item.period}</p>
                       </div>
-                      <p className="mb-3 text-xs text-muted-foreground">
-                        Placeholder file: <span className="font-mono">{placeholder}</span>
-                      </p>
                       <ul className="space-y-2">
                         {item.tasks.map((task, j) => (
                           <li key={j} className="flex gap-2 text-sm text-muted-foreground">
@@ -99,6 +63,21 @@ const ExperienceSection = () => {
                           </li>
                         ))}
                       </ul>
+                      {docs.length > 0 && (
+                        <div className="mt-4 flex flex-wrap gap-2">
+                          {docs.map((doc) => (
+                            <a
+                              key={doc.label}
+                              href={withBase(doc.url)}
+                              target="_blank"
+                              rel="noreferrer"
+                              className="inline-flex rounded-md border border-primary/40 bg-primary/10 px-3 py-1.5 text-xs text-primary"
+                            >
+                              {doc.label}
+                            </a>
+                          ))}
+                        </div>
+                      )}
                     </div>
                   </div>
                 </motion.div>
@@ -120,7 +99,7 @@ const ExperienceSection = () => {
             <p className="text-muted-foreground">Recognized achievements and professional credentials</p>
           </motion.div>
           <div className="space-y-4">
-            {certifications.map((cert, i) => (
+            {certificationItems.map((cert, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 20 }}
@@ -130,7 +109,13 @@ const ExperienceSection = () => {
                 className="card-glass rounded-xl p-6"
               >
                 <div className="flex items-start gap-4">
-                  <div className="org-logo text-[10px] font-semibold uppercase tracking-wide text-primary">Icon</div>
+                  <div className="org-logo overflow-hidden bg-white p-1">
+                    <img
+                      src={withBase(cert.icon)}
+                      alt={`${cert.name} icon`}
+                      className="h-9 w-9 rounded-md object-contain"
+                    />
+                  </div>
                   <div className="flex-1">
                     <div className="mb-2 flex flex-wrap items-start justify-between gap-2">
                       <div>
@@ -140,23 +125,14 @@ const ExperienceSection = () => {
                       <span className="text-sm text-muted-foreground">{cert.date}</span>
                     </div>
                     <p className="mb-2 text-sm text-muted-foreground">{cert.details}</p>
-                    <p className="mb-3 text-xs text-muted-foreground">
-                      Placeholder file: <span className="font-mono">{cert.placeholder}</span>
-                    </p>
-                    {cert.certUrl === "#" ? (
-                      <span className="inline-flex rounded-md border border-border px-3 py-1.5 text-xs text-muted-foreground">
-                        Add certificate URL
-                      </span>
-                    ) : (
-                      <a
-                        href={cert.certUrl}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="inline-flex rounded-md border border-primary/40 bg-primary/10 px-3 py-1.5 text-xs text-primary"
-                      >
-                        View certificate
-                      </a>
-                    )}
+                    <a
+                      href={withBase(cert.certUrl)}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex rounded-md border border-primary/40 bg-primary/10 px-3 py-1.5 text-xs text-primary"
+                    >
+                      View certificate
+                    </a>
                   </div>
                 </div>
               </motion.div>

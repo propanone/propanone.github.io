@@ -1,11 +1,11 @@
 import { useLanguage } from "@/i18n/LanguageContext";
 import { motion } from "framer-motion";
-const schoolPlaceholders: Record<string, string> = {
-  "Sup Galilée": "public/icons/education/sup-galilee.png",
-  "Sorbonne": "public/icons/education/sorbonne-paris-nord.png",
-  "ENSTA": "public/icons/education/ensta.png",
-  "ESSA": "public/icons/education/essa.png",
-};
+import {
+  defaultPortfolioIcon,
+  educationLogoBySchoolKeyword,
+} from "@/data/portfolioContent";
+
+const withBase = (path: string) => `${import.meta.env.BASE_URL}${path}`;
 
 const EducationSection = () => {
   const { t } = useLanguage();
@@ -25,8 +25,9 @@ const EducationSection = () => {
 
         <div className="space-y-6">
           {t.education.items.map((item, i) => {
-            const placeholder = Object.entries(schoolPlaceholders).find(([key]) => item.school.includes(key))?.[1]
-              ?? "public/icons/education/replace-me.png";
+            const placeholder =
+              Object.entries(educationLogoBySchoolKeyword).find(([key]) => item.school.includes(key))?.[1] ??
+              defaultPortfolioIcon;
             return (
               <motion.div
                 key={i}
@@ -37,16 +38,17 @@ const EducationSection = () => {
                 className="card-glass rounded-xl p-6"
               >
                 <div className="flex gap-4">
-                  <div className="org-logo text-[10px] font-semibold uppercase tracking-wide text-primary">
-                    Icon
+                  <div className="org-logo overflow-hidden bg-white p-1">
+                    <img
+                      src={withBase(placeholder)}
+                      alt={`${item.school} logo`}
+                      className="h-9 w-9 rounded-md object-contain"
+                    />
                   </div>
                   <div className="flex-1">
                     <h3 className="mb-1 font-semibold">{item.degree}</h3>
                     <p className="mb-2 text-primary">{item.school}</p>
                     <p className="mb-2 text-sm text-muted-foreground">{item.location} • {item.period}</p>
-                    <p className="text-xs text-muted-foreground">
-                      Placeholder file: <span className="font-mono">{placeholder}</span>
-                    </p>
                     {"note" in item && item.note && (
                       <p className="mt-2 text-sm italic text-primary/80">{item.note}</p>
                     )}
