@@ -17,9 +17,10 @@ const ProjectsSection = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
+          transition={{ duration: 0.2, ease: "linear" }}
           className="mb-12 text-center"
         >
-          <h2 className="mb-3 text-3xl font-bold md:text-4xl">{t.projects.title}</h2>
+          <h2 className="terminal-title mb-3 text-3xl font-bold md:text-4xl">{t.projects.title}</h2>
           <p className="text-xl text-muted-foreground">{t.projects.subtitle}</p>
         </motion.div>
 
@@ -33,59 +34,62 @@ const ProjectsSection = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="card-glass p-6"
+                transition={{ delay: i * 0.06, duration: 0.2, ease: "linear" }}
+                className="inventory-panel pixel-reveal"
               >
-                <div className="mb-4 inline-flex h-16 w-16 items-center justify-center overflow-hidden border-2 border-border bg-white p-2">
-                  <img
-                    src={withBase(meta?.visual ?? defaultPortfolioIcon)}
-                    alt={`${project.name} visual`}
-                    className="h-full w-full object-contain"
-                  />
-                </div>
+                <div className="inventory-head">PROJECT SLOT {String(i + 1).padStart(2, "0")}</div>
+                <div className="p-6">
+                  <div className="mb-4 inline-flex h-16 w-16 items-center justify-center overflow-hidden border-2 border-border bg-white p-2">
+                    <img
+                      src={withBase(meta?.visual ?? defaultPortfolioIcon)}
+                      alt={`${project.name} visual`}
+                      className="h-full w-full object-contain"
+                    />
+                  </div>
 
-                <h3 className="mb-2 text-lg font-semibold">{project.name}</h3>
-                {meta?.oneLiner && <p className="mb-3 text-base font-medium text-primary/90">{meta.oneLiner}</p>}
-                <p className="mb-4 text-base leading-relaxed text-muted-foreground">{project.description}</p>
+                  <h3 className="mb-2 text-lg font-semibold">{project.name}</h3>
+                  {meta?.oneLiner && <p className="mb-3 text-base font-medium text-primary/90">{meta.oneLiner}</p>}
+                  <p className="mb-4 text-base leading-relaxed text-muted-foreground">{project.description}</p>
 
-                <div className="mb-4 flex flex-wrap gap-2">
-                  {project.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="pixel-chip"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
+                  <div className="mb-4 flex flex-wrap gap-2">
+                    {project.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="pixel-chip"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
 
-                <div className="flex flex-wrap gap-2">
-                  {meta?.github ? (
-                    <a
-                      href={meta.github}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="pixel-btn-secondary px-3 py-1"
-                    >
-                      GitHub repository
-                    </a>
-                  ) : (
-                    <span className="pixel-chip">
-                      Add GitHub repository link
-                    </span>
-                  )}
+                  <div className="flex flex-wrap gap-2">
+                    {meta?.github ? (
+                      <a
+                        href={meta.github}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="pixel-btn-secondary px-3 py-1"
+                      >
+                        GitHub repository
+                      </a>
+                    ) : (
+                      <span className="pixel-chip">
+                        Add GitHub repository link
+                      </span>
+                    )}
 
-                  {(meta?.resources ?? []).map((resource) => (
-                    <a
-                      key={resource.label}
-                      href={withBase(resource.url)}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="pixel-btn-secondary px-3 py-1"
-                    >
-                      {resource.label}
-                    </a>
-                  ))}
+                    {(meta?.resources ?? []).map((resource) => (
+                      <a
+                        key={resource.label}
+                        href={withBase(resource.url)}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="pixel-btn-secondary px-3 py-1"
+                      >
+                        {resource.label}
+                      </a>
+                    ))}
+                  </div>
                 </div>
               </motion.article>
             );

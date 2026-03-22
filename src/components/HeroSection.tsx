@@ -12,12 +12,12 @@ const HeroSection = () => {
         <motion.div
           initial={{ opacity: 0, x: -40 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.7 }}
+          transition={{ duration: 0.22, ease: "linear" }}
           className="flex-1"
         >
           <span className="section-eyebrow">{t.hero.badge}</span>
 
-          <h1 className="mb-6 text-4xl font-extrabold leading-tight md:text-6xl lg:text-7xl">
+          <h1 className="terminal-title mb-6 text-4xl font-extrabold leading-tight md:text-6xl lg:text-7xl">
             {t.hero.title1} <span className="text-gradient">{t.hero.title2}</span>
           </h1>
 
@@ -68,7 +68,7 @@ const HeroSection = () => {
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.7, delay: 0.2 }}
+          transition={{ duration: 0.24, delay: 0.08, ease: "linear" }}
           className="relative flex-shrink-0"
         >
           <div className="absolute -inset-3 border-2 border-border" />

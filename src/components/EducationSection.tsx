@@ -17,9 +17,10 @@ const EducationSection = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
+          transition={{ duration: 0.2, ease: "linear" }}
           className="mb-12 text-center"
         >
-          <h2 className="mb-3 text-3xl font-bold md:text-4xl">{t.education.title}</h2>
+          <h2 className="terminal-title mb-3 text-3xl font-bold md:text-4xl">{t.education.title}</h2>
           <p className="text-xl text-muted-foreground">{t.education.subtitle}</p>
         </motion.div>
 
@@ -34,8 +35,8 @@ const EducationSection = () => {
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="card-glass p-6"
+                transition={{ delay: i * 0.05, duration: 0.2, ease: "linear" }}
+                className="card-glass p-6 pixel-reveal"
               >
                 <div className="flex gap-4">
                   <div className="org-logo overflow-hidden bg-white p-1">

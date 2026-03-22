@@ -20,9 +20,10 @@ const ExperienceSection = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mb-12 text-center"
+             className="mb-12 text-center"
+             transition={{ duration: 0.2, ease: "linear" }}
           >
-            <h2 className="mb-3 text-3xl font-bold md:text-4xl">{t.experience.title}</h2>
+              <h2 className="terminal-title mb-3 text-3xl font-bold md:text-4xl">{t.experience.title}</h2>
             <p className="text-xl text-muted-foreground">{t.experience.subtitle}</p>
           </motion.div>
 
@@ -36,7 +37,7 @@ const ExperienceSection = () => {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ delay: i * 0.1 }}
+                   transition={{ delay: i * 0.05, duration: 0.2, ease: "linear" }}
                   className="card-glass p-6"
                 >
                   <div className="flex gap-4">
@@ -93,9 +94,10 @@ const ExperienceSection = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mb-12 text-center"
+             className="mb-12 text-center"
+             transition={{ duration: 0.2, ease: "linear" }}
           >
-            <h2 className="mb-3 text-3xl font-bold md:text-4xl">Certifications</h2>
+              <h2 className="terminal-title mb-3 text-3xl font-bold md:text-4xl">Certifications</h2>
             <p className="text-xl text-muted-foreground">Recognized achievements and professional credentials</p>
           </motion.div>
           <div className="space-y-4">
@@ -105,7 +107,7 @@ const ExperienceSection = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
+                 transition={{ delay: i * 0.05, duration: 0.2, ease: "linear" }}
                 className="card-glass p-6"
               >
                 <div className="flex items-start gap-4">

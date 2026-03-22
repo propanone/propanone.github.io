@@ -41,9 +41,10 @@ const SkillsSection = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
+          transition={{ duration: 0.2, ease: "linear" }}
           className="mb-12 text-center"
         >
-          <h2 className="mb-3 text-3xl font-bold md:text-4xl">{t.skills.title}</h2>
+          <h2 className="terminal-title mb-3 text-3xl font-bold md:text-4xl">{t.skills.title}</h2>
           <p className="text-xl text-muted-foreground">{t.skills.subtitle}</p>
         </motion.div>
 
@@ -56,17 +57,20 @@ const SkillsSection = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: i * 0.08 }}
-                className="card-glass p-6"
+                transition={{ delay: i * 0.05, duration: 0.2, ease: "linear" }}
+                className="inventory-panel pixel-reveal"
               >
-                <h3 className="mb-3 font-semibold text-primary">{cat.title}</h3>
-                <p className="mb-4 text-base text-muted-foreground">
-                  {categoryDescriptions[lang][key]}
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  {cat.items.map((item) => (
-                    <SkillBadge key={item} name={item} />
-                  ))}
+                <div className="inventory-head">SKILL SLOT {String(i + 1).padStart(2, "0")}</div>
+                <div className="p-6">
+                  <h3 className="mb-3 font-semibold text-primary">{cat.title}</h3>
+                  <p className="mb-4 text-base text-muted-foreground">
+                    {categoryDescriptions[lang][key]}
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {cat.items.map((item) => (
+                      <SkillBadge key={item} name={item} />
+                    ))}
+                  </div>
                 </div>
               </motion.div>
             );
