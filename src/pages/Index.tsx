@@ -5,6 +5,7 @@ import EducationSection from "@/components/EducationSection";
 import ExperienceSection from "@/components/ExperienceSection";
 import ProjectsSection from "@/components/ProjectsSection";
 import SkillsSection from "@/components/SkillsSection";
+import FooterBar from "@/components/FooterBar";
 
 const Index = () => {
   return (
@@ -16,9 +17,7 @@ const Index = () => {
       <ExperienceSection />
       <ProjectsSection />
       <SkillsSection />
-      <footer className="border-t-2 border-border bg-card py-8 text-center text-muted-foreground">
-        © {new Date().getFullYear()} Walid Kessoum. All rights reserved.
-      </footer>
+      <FooterBar />
     </div>
   );
 };

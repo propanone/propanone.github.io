@@ -21,7 +21,7 @@ const ExperienceSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
              className="mb-12 text-center"
-             transition={{ duration: 0.2, ease: "linear" }}
+           transition={{ duration: 0.35, ease: "easeOut" }}
           >
               <h2 className="terminal-title mb-3 text-3xl font-bold md:text-4xl">{t.experience.title}</h2>
             <p className="text-xl text-muted-foreground">{t.experience.subtitle}</p>
@@ -37,7 +37,7 @@ const ExperienceSection = () => {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                   transition={{ delay: i * 0.05, duration: 0.2, ease: "linear" }}
+                 transition={{ delay: i * 0.06, duration: 0.32, ease: "easeOut" }}
                   className="card-glass p-6"
                 >
                   <div className="flex gap-4">
@@ -71,7 +71,7 @@ const ExperienceSection = () => {
                               key={doc.label}
                               href={withBase(doc.url)}
                               target="_blank"
-                              rel="noreferrer"
+                              rel="noopener noreferrer"
                               className="pixel-btn-secondary px-3 py-1"
                             >
                               {doc.label}
@@ -94,10 +94,10 @@ const ExperienceSection = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-             className="mb-12 text-center"
-             transition={{ duration: 0.2, ease: "linear" }}
+            transition={{ duration: 0.35, ease: "easeOut" }}
+            className="mb-12 text-center"
           >
-              <h2 className="terminal-title mb-3 text-3xl font-bold md:text-4xl">Certifications</h2>
+            <h2 className="terminal-title mb-3 text-3xl font-bold md:text-4xl">Certifications</h2>
             <p className="text-xl text-muted-foreground">Recognized achievements and professional credentials</p>
           </motion.div>
           <div className="space-y-4">
@@ -107,7 +107,7 @@ const ExperienceSection = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                 transition={{ delay: i * 0.05, duration: 0.2, ease: "linear" }}
+                transition={{ delay: i * 0.06, duration: 0.32, ease: "easeOut" }}
                 className="card-glass p-6"
               >
                 <div className="flex items-start gap-4">
@@ -130,7 +130,7 @@ const ExperienceSection = () => {
                     <a
                       href={withBase(cert.certUrl)}
                       target="_blank"
-                      rel="noreferrer"
+                      rel="noopener noreferrer"
                       className="pixel-btn-secondary px-3 py-1"
                     >
                       View certificate

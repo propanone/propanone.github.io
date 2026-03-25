@@ -1,6 +1,8 @@
 import { useLanguage } from "@/i18n/LanguageContext";
 import { motion } from "framer-motion";
 import profileImg from "@/assests/profile.jpg";
+import { Mail, Phone, MapPin, Github, Linkedin } from "lucide-react";
+import { personalInfo } from "@/data/siteContent";
 
 const HeroSection = () => {
   const { t } = useLanguage();
@@ -12,7 +14,7 @@ const HeroSection = () => {
         <motion.div
           initial={{ opacity: 0, x: -40 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.22, ease: "linear" }}
+          transition={{ duration: 0.35, ease: "easeOut" }}
           className="flex-1"
         >
           <span className="section-eyebrow">{t.hero.badge}</span>
@@ -25,29 +27,29 @@ const HeroSection = () => {
           <p className="mb-6 max-w-2xl text-lg text-muted-foreground md:text-xl">- {t.hero.subtitle2}</p>
 
           <div className="mb-8 flex flex-wrap items-center gap-4 text-base text-muted-foreground">
-            <a href="mailto:mw.kessoum@icloud.com" className="pixel-small transition-colors hover:text-primary">
-              Email: mw.kessoum@icloud.com
+            <a href={`mailto:${personalInfo.email}`} className="pixel-small inline-flex items-center gap-2 transition-colors hover:text-primary">
+              <Mail className="h-4 w-4" /> Email: {personalInfo.email}
             </a>
-            <a href="tel:+33746505437" className="pixel-small transition-colors hover:text-primary">
-              Phone: +33 7 46 50 54 37
+            <a href={`tel:${personalInfo.phone.replace(/\s+/g, "")}`} className="pixel-small inline-flex items-center gap-2 transition-colors hover:text-primary">
+              <Phone className="h-4 w-4" /> Phone: {personalInfo.phone}
             </a>
-            <span className="pixel-small">
-              Location: {t.hero.location}
+            <span className="pixel-small inline-flex items-center gap-2">
+              <MapPin className="h-4 w-4" /> Location: {t.hero.location}
             </span>
           </div>
 
           <div className="mb-6 flex flex-wrap gap-4">
             <a
-              href="mailto:mw.kessoum@icloud.com"
+              href={`mailto:${personalInfo.email}`}
               id="contact"
               className="pixel-btn"
             >
               {t.hero.contact}
             </a>
             <a
-              href={`${import.meta.env.BASE_URL}cv.pdf#view=FitH`}
+              href={`${import.meta.env.BASE_URL}${personalInfo.cvPath}`}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className="pixel-btn-secondary"
             >
               {t.hero.cv}
@@ -55,11 +57,11 @@ const HeroSection = () => {
           </div>
 
           <div className="flex flex-wrap items-center gap-4 pt-2 text-base text-muted-foreground">
-            <a href="https://github.com/propanone" target="_blank" rel="noreferrer" className="pixel-small transition-colors hover:text-primary">
-              GitHub
+            <a href={personalInfo.github} target="_blank" rel="noopener noreferrer" className="pixel-small inline-flex items-center gap-2 transition-colors hover:text-primary">
+              <Github className="h-4 w-4" /> GitHub
             </a>
-            <a href="https://linkedin.com/in/walid-kessoum" target="_blank" rel="noreferrer" className="pixel-small transition-colors hover:text-primary">
-              LinkedIn
+            <a href={personalInfo.linkedin} target="_blank" rel="noopener noreferrer" className="pixel-small inline-flex items-center gap-2 transition-colors hover:text-primary">
+              <Linkedin className="h-4 w-4" /> LinkedIn
             </a>
           </div>
         </motion.div>
@@ -68,7 +70,7 @@ const HeroSection = () => {
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.24, delay: 0.08, ease: "linear" }}
+          transition={{ duration: 0.4, delay: 0.08, ease: "easeOut" }}
           className="relative flex-shrink-0"
         >
           <div className="absolute -inset-3 border-2 border-border" />
@@ -76,8 +78,7 @@ const HeroSection = () => {
             <img
               src={profileImg}
               alt="Walid Kessoum"
-              className="h-full w-full object-cover grayscale contrast-125"
-              style={{ imageRendering: "pixelated" }}
+              className="h-full w-full object-cover"
             />
           </div>
         </motion.div>
