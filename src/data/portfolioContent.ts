@@ -108,7 +108,7 @@ export const certificationItems: PortfolioCertification[] = [
 export const projectMetaByName: Record<string, PortfolioProjectMeta> = {
   "Data Warehouse LTE": {
     oneLiner: "Centralized LTE data platform for KPI monitoring, ETL automation, and forecasting.",
-    github: "https://github.com/propanone/KPI-Platform",
+    github: "https://github.com/propanone/A-Data-Driven-Framework-for-AI-Powered-LTE-Network-Performance-Optimizati",
     visual: "icons/projects/docker-logo.png",
     resources: [
       { label: "Project report (PDF)", url: "pfe-thesis.pdf" },
@@ -117,7 +117,7 @@ export const projectMetaByName: Record<string, PortfolioProjectMeta> = {
   },
   "LTE Data Warehouse": {
     oneLiner: "Centralized LTE data platform for KPI monitoring, ETL automation, and forecasting.",
-    github: "https://github.com/propanone/KPI-Platform",
+    github: "https://github.com/propanone/A-Data-Driven-Framework-for-AI-Powered-LTE-Network-Performance-Optimizati",
     visual: "icons/projects/docker-logo.png",
     resources: [
       { label: "Project report (PDF)", url: "pfe-thesis.pdf" },
