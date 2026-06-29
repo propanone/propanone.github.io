@@ -9,10 +9,10 @@ export const translations = {
       contact: "Contact",
     },
     hero: {
-      badge: "Recherche Contrat d'Apprentissage · Disponible Septembre 2026",
+      badge: "Master 2 Réseaux et Télécoms · Université Paris-Saclay",
       title1: "Walid",
       title2: "Kessoum",
-      subtitle1: "Élève Ingénieur (2ème année), Spécialité Réseaux et Télécommunications à Sup Galilée – Université Sorbonne Paris Nord",
+      subtitle1: "Étudiant Master 2, Réseaux et Télécommunications (voie apprentissage) à Université Paris-Saclay",
       subtitle2: "Ingénieur d'État et Master en Systèmes de Télécommunications et Réseaux de l'ENSTA d'Alger",
       location: "Paris, Île-de-France",
       contact: "Me Contacter",
@@ -22,7 +22,7 @@ export const translations = {
       title: "À propos de moi",
       subtitle: "Passionné par les réseaux, la data et les télécommunications",
       description: "Ingénieur en Télécommunications et Réseaux, je suis passionné par l'optimisation des performances réseau et l'analyse de données. Mes centres d'intérêt incluent les réseaux LTE/5G, le Data Engineering, l'intelligence artificielle appliquée aux télécoms et le développement fullstack.",
-      description2: "Actuellement en cycle ingénieur à Sup Galilée (Sorbonne Paris Nord), je recherche un contrat d'apprentissage pour mettre mes compétences techniques au service de projets innovants dans les télécommunications et la data.",
+      description2: "Actuellement en Master 2 Réseaux et Télécoms à Université Paris-Saclay (voie apprentissage), je poursuis mon développement professionnel dans les télécommunications et le data engineering avec des projets innovants.",
       cards: {
         networks: { title: "Réseaux & Télécoms", desc: "LTE, 5G, FTTH, SCADA, VoIP, SDH, DWDM" },
         data: { title: "Data Engineering", desc: "ETL, Data Warehouse, Apache Airflow, PostgreSQL" },
@@ -35,10 +35,16 @@ export const translations = {
       subtitle: "Mon parcours académique",
       items: [
         {
+          degree: "Master 2 Réseaux et Télécoms (voie apprentissage)",
+          school: "Université Paris-Saclay",
+          location: "Paris, France",
+          period: "Sept. 2027 – en cours",
+        },
+        {
           degree: "Cycle Ingénieur (2ème année), Spécialité Réseaux et Télécommunications",
           school: "Sup Galilée – Université Sorbonne Paris Nord",
           location: "Paris, France",
-          period: "Sept. 2025 – en cours",
+          period: "Sept. 2025 – Juin 2026",
         },
         {
           degree: "Diplôme d'Ingénieur d'État et Master en Systèmes de Télécommunications et Réseaux",
@@ -117,6 +123,11 @@ export const translations = {
       subtitle: "Quelques réalisations marquantes",
       items: [
         {
+          name: "SWITCHERS – Architecture Réseau d'Entreprise Résiliente",
+          description: "Architecture multi-sites avec routage dynamique OSPF multi-zone, services DHCP/HTTP/Mail, NAT et accès Internet sécurisé. Simulation de panne de lien avec reconvergence OSPF automatique démontrant la continuité de service.",
+          tags: ["Cisco", "Packet Tracer", "OSPF", "Routing", "Network Architecture"],
+        },
+        {
           name: "Data Warehouse LTE",
           description: "Architecture data warehouse pour centraliser les données réseau LTE avec ETL automatisé via Apache Airflow et modèles LSTM pour la prévision des KPIs.",
           tags: ["Python", "PostgreSQL", "Airflow", "LSTM", "PowerBI"],
@@ -192,10 +203,10 @@ export const translations = {
       contact: "Contact",
     },
     hero: {
-      badge: "Looking for Apprenticeship · Available September 2026",
+      badge: "Master's 2 Networks & Telecommunications · Université Paris-Saclay",
       title1: "Walid",
       title2: "Kessoum",
-      subtitle1: "Student Engineer (2nd year), Networks & Telecommunications at Sup Galilée – Sorbonne Paris Nord University",
+      subtitle1: "Master's Student, Networks & Telecommunications (Work-Study Track) at Université Paris-Saclay",
       subtitle2: "State Engineer & Master's in Telecommunications Systems and Networks from ENSTA, Algiers",
       location: "Paris, Île-de-France",
       contact: "Contact Me",
@@ -205,7 +216,7 @@ export const translations = {
       title: "About Me",
       subtitle: "Passionate about networks, data and telecommunications",
       description: "Telecommunications and Networks Engineer, passionate about network performance optimization and data analysis. My interests include LTE/5G networks, Data Engineering, AI applied to telecoms, and fullstack development.",
-      description2: "Currently pursuing an engineering degree at Sup Galilée (Sorbonne Paris Nord), I am looking for an apprenticeship to apply my technical skills to innovative projects in telecommunications and data.",
+      description2: "Currently pursuing a Master's in Networks & Telecommunications at Université Paris-Saclay (work-study program), I continue to develop professionally in telecommunications and data engineering with innovative projects.",
       cards: {
         networks: { title: "Networks & Telecoms", desc: "LTE, 5G, FTTH, SCADA, VoIP, SDH, DWDM" },
         data: { title: "Data Engineering", desc: "ETL, Data Warehouse, Apache Airflow, PostgreSQL" },
@@ -218,10 +229,16 @@ export const translations = {
       subtitle: "My academic background",
       items: [
         {
+          degree: "Master's 2 Networks & Telecommunications (Work-Study Track)",
+          school: "Université Paris-Saclay",
+          location: "Paris, France",
+          period: "Sept. 2027 – Present",
+        },
+        {
           degree: "Engineering Degree (2nd year), Networks & Telecommunications",
           school: "Sup Galilée – Sorbonne Paris Nord University",
           location: "Paris, France",
-          period: "Sept. 2025 – Present",
+          period: "Sept. 2025 – June 2026",
         },
         {
           degree: "State Engineer Diploma & Master's in Telecommunications Systems and Networks",
@@ -299,6 +316,11 @@ export const translations = {
       title: "Projects",
       subtitle: "Notable achievements",
       items: [
+        {
+          name: "SWITCHERS – Resilient Enterprise Network Architecture",
+          description: "Multi-site architecture with dynamic OSPF multi-area routing, DHCP/HTTP/Mail services, NAT, and secure Internet access. Link failure simulation with automatic OSPF reconvergence demonstrating service continuity.",
+          tags: ["Cisco", "Packet Tracer", "OSPF", "Routing", "Network Architecture"],
+        },
         {
           name: "LTE Data Warehouse",
           description: "Data warehouse architecture to centralize LTE network data with automated ETL via Apache Airflow and LSTM models for KPI forecasting.",

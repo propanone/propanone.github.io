@@ -137,6 +137,14 @@ export const projectMetaByName: Record<string, PortfolioProjectMeta> = {
     ],
   },
 
+  "SWITCHERS – Resilient Enterprise Network Architecture": {
+    oneLiner: "Multi-site enterprise network with OSPF multi-area routing, DHCP, NAT, and automatic failover.",
+    github: "https://github.com/propanone/switchers-network-architecture",
+    visual: "icons/projects/cisco-packet-tracer.png",
+    resources: [
+      { label: "Cisco Packet Tracer Project", url: "switchers-network.pkt" },
+    ],
+  },
   "SCADA/VoIP Network Analysis": {
     oneLiner: "Industrial network analysis project with reliability and latency diagnostics.",
     github: "https://github.com/propanone/scada-voip-analysis",
