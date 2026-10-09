@@ -1,3 +1,14 @@
+// EDIT THIS FILE for contact links, documents, logos, certifications, and project links.
+
+export const personalInfo = {
+  name: "Walid Kessoum",
+  email: "mw.kessoum@icloud.com",
+  phone: "+33 7 46 50 54 37",
+  github: "https://github.com/propanone",
+  linkedin: "https://linkedin.com/in/walid-kessoum",
+  cvPath: "cv.pdf#view=FitH",
+};
+
 export type PortfolioLink = {
   label: string;
   url: string;
@@ -20,6 +31,81 @@ export type PortfolioProjectMeta = {
 };
 
 export const defaultPortfolioIcon = "favicon.png";
+
+export const quickTechStack = [
+  { label: "Python", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
+  { label: "PostgreSQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" },
+  { label: "Airflow", icon: "https://cdn.simpleicons.org/apacheairflow/17b0eb" },
+  { label: "Docker", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
+  { label: "5G", icon: "https://cdn.simpleicons.org/cisco/1ba0d7" },
+  { label: "Cloud", icon: "https://cdn.simpleicons.org/googlecloud/4285f4" },
+];
+
+export const skillLogoByName: Record<string, string> = {
+  Python: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+  SQL: "https://cdn.simpleicons.org/postgresql/66d9ef",
+  "C/C++": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg",
+  Java: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
+  JavaScript: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+  MATLAB: "https://cdn.simpleicons.org/mathworks/e16737",
+  "Assembly ARM": "https://cdn.simpleicons.org/arm/00adef",
+  XGBoost: "https://cdn.simpleicons.org/xgboost/ffffff",
+  LSTM: "https://cdn.simpleicons.org/tensorflow/ff6f00",
+  "Random Forest": "https://cdn.simpleicons.org/scikitlearn/f7931e",
+  "Apache Airflow": "https://cdn.simpleicons.org/apacheairflow/17b0eb",
+  ETL: "https://cdn.simpleicons.org/apachespark/e25a1c",
+  "Data Warehousing": "https://cdn.simpleicons.org/postgresql/66d9ef",
+  Pandas: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg",
+  NumPy: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg",
+  "Scikit-learn": "https://cdn.simpleicons.org/scikitlearn/f7931e",
+  Django: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg",
+  Flask: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg",
+  Git: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+  Docker: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
+  Streamlit: "https://cdn.simpleicons.org/streamlit/ff4b4b",
+  Wireshark: "https://cdn.simpleicons.org/wireshark/1679a7",
+  Linux: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg",
+  "LTE/5G": "https://cdn.simpleicons.org/cisco/1ba0d7",
+  "TCP/IP": "https://cdn.simpleicons.org/cisco/1ba0d7",
+  SCADA: "https://cdn.simpleicons.org/siemens/00a0a0",
+  VoIP: "https://cdn.simpleicons.org/asterisk/f5f5f5",
+  FTTH: "https://cdn.simpleicons.org/cisco/1ba0d7",
+  SDH: "https://cdn.simpleicons.org/nokia/124191",
+  DWDM: "https://cdn.simpleicons.org/huawei/ff1a3d",
+  OFDM: "https://cdn.simpleicons.org/intel/0071c5",
+  "Packet Tracer": "https://cdn.simpleicons.org/cisco/1ba0d7",
+  Arduino: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/arduino/arduino-original.svg",
+  STM32: "https://cdn.simpleicons.org/stmicroelectronics/005ca8",
+  "MS Project": "https://cdn.simpleicons.org/microsoftproject/217346",
+  PowerBI: "https://cdn.simpleicons.org/powerbi/f2c811",
+  "Adobe Creative Suite": "https://cdn.simpleicons.org/adobe/ff0000",
+  "Huawei ICT Competition (Lauréat Mondial)": "https://cdn.simpleicons.org/huawei/ff1a3d",
+  "Huawei ICT Competition (Global Winner)": "https://cdn.simpleicons.org/huawei/ff1a3d",
+  "Google Cybersecurity": "https://cdn.simpleicons.org/google/4285f4",
+  "Google IT Automation with Python": "https://cdn.simpleicons.org/google/4285f4",
+  "Google Cloud Engineering": "https://cdn.simpleicons.org/googlecloud/4285f4",
+};
+
+export const categoryDescriptions = {
+  fr: {
+    programming: "Ma base de développement logiciel, du scripting à la programmation système.",
+    ml: "Conception de pipelines data et de modèles prédictifs orientés performance réseau.",
+    frameworks: "Stack d'implémentation et d'observabilité utilisée en production.",
+    telecom: "Technologies cœur de métier pour l'analyse, le déploiement et l'optimisation réseau.",
+    hardware: "Compétences pratiques pour prototypage, gestion de projet et data viz.",
+    certifications: "Certifications validant des compétences appliquées sur des cas réels.",
+    languages: "Langues de travail pour les environnements techniques et internationaux.",
+  },
+  en: {
+    programming: "Core software engineering stack, from scripting to systems-level coding.",
+    ml: "Data pipelines and predictive modeling focused on network performance use cases.",
+    frameworks: "Implementation and observability toolchain used for real-world delivery.",
+    telecom: "Domain technologies for network analysis, deployment, and optimization.",
+    hardware: "Hands-on tooling for prototyping, planning, and technical communication.",
+    certifications: "Credentials validating applied skills on practical scenarios.",
+    languages: "Working languages used in technical and international contexts.",
+  },
+} as const;
 
 export const educationLogoBySchoolKeyword: Record<string, string> = {
   "Sup Galilée": "icons/education/sup-galilee.png",
@@ -131,8 +217,8 @@ export const projectMetaByName: Record<string, PortfolioProjectMeta> = {
     visual: "icons/projects/docker-logo.png",
     resources: [
       { label: "PPT documentation", url: "ict-slides.pdf" },
-      { label: "Associated certification", url: "dsip-certification.pdf" },
-      { label: "Associated certification", url: "huawei-ict-competition-certificate.pdf" },
+      { label: "DSIP certification", url: "dsip-certification.pdf" },
+      { label: "Competition certificate", url: "huawei-ict-competition-certificate.pdf" },
 
     ],
   },
@@ -201,4 +287,18 @@ export const projectMetaByName: Record<string, PortfolioProjectMeta> = {
     visual: "favicon.png",
     resources: [],
   },
+};
+
+export const projectMetaById: Record<string, PortfolioProjectMeta> = {
+  "switchers-network": projectMetaByName["SWITCHERS – Resilient Enterprise Network Architecture"],
+  "lte-data-warehouse": projectMetaByName["LTE Data Warehouse"],
+  "ai-insurance-platform": projectMetaByName["Plateforme SaaS IA - Assurance"],
+  "arduino-temperature-sensor": projectMetaByName["Temperature Sensing Using LM35 with Arduino"],
+  "giver-reincarnated": projectMetaByName["THE GIVER REINCARNATED"],
+  "aes-crypto": projectMetaByName["AES Crypto"],
+  "django-library-management": projectMetaByName["Library Management using Django"],
+  "networking-programming": projectMetaByName["Networking Programming"],
+  "oop-python": projectMetaByName["OOP Python"],
+  "security-research-lab": projectMetaByName["Security Research Lab"],
+  "obsidian-second-brain": projectMetaByName["Obsidian Second Brain"],
 };

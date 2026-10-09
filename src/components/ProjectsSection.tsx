@@ -1,7 +1,7 @@
 import { useLanguage } from "@/i18n/LanguageContext";
 import { motion } from "framer-motion";
 import {
-  projectMetaByName,
+  projectMetaById,
 } from "@/data/portfolioContent";
 
 const withBase = (path: string) => `${import.meta.env.BASE_URL}${path}`;
@@ -26,7 +26,7 @@ const ProjectsSection = () => {
 
         <div className="grid gap-6 md:grid-cols-2">
           {t.projects.items.map((project, i) => {
-            const meta = projectMetaByName[project.name];
+            const meta = projectMetaById[project.id];
 
             return (
               <motion.article
@@ -37,8 +37,17 @@ const ProjectsSection = () => {
                 transition={{ delay: i * 0.06, duration: 0.32, ease: "easeOut" }}
                 className="inventory-panel pixel-reveal"
               >
-                <div className="inventory-head">Project Case {String(i + 1).padStart(2, "0")}</div>
+                <div className="inventory-head">{t.projects.caseLabel} {String(i + 1).padStart(2, "0")}</div>
                 <div className="p-6">
+                  {meta?.visual && (
+                    <img
+                      src={withBase(meta.visual)}
+                      alt={`${project.name} visual`}
+                      className="mb-4 h-16 w-16 object-contain"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  )}
                   <h3 className="mb-2 text-lg font-semibold">{project.name}</h3>
                   {meta?.oneLiner && <p className="mb-3 text-base font-medium text-primary/90">{meta.oneLiner}</p>}
                   <p className="mb-4 text-base leading-relaxed text-muted-foreground">{project.description}</p>
@@ -62,11 +71,11 @@ const ProjectsSection = () => {
                         rel="noopener noreferrer"
                         className="pixel-btn-secondary px-3 py-1"
                       >
-                        GitHub repository
+                        {t.projects.repositoryLabel}
                       </a>
                     ) : (
                       <span className="pixel-chip">
-                        Add GitHub repository link
+                        {t.projects.missingRepositoryLabel}
                       </span>
                     )}
 

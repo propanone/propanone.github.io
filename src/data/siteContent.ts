@@ -1,12 +1,3 @@
-export const personalInfo = {
-  name: "Walid Kessoum",
-  email: "mw.kessoum@icloud.com",
-  phone: "+33 7 46 50 54 37",
-  github: "https://github.com/propanone",
-  linkedin: "https://linkedin.com/in/walid-kessoum",
-  cvPath: "cv.pdf#view=FitH",
-};
-
 export const sectionIds = ["about", "education", "experience", "projects", "skills"] as const;
 
 export const aboutHighlightKeywords = [
@@ -31,12 +22,18 @@ export const footerContent = {
     description: "Ingénieur diplômé, avec une expérience en réseaux, télécoms et développement logiciel. Intéressé par des projets innovants et techniques",
     navigationTitle: "Navigation",
     linksTitle: "Liens",
+    emailLabel: "Email",
+    githubLabel: "GitHub",
+    linkedinLabel: "LinkedIn",
     topLabel: "Haut",
   },
   en: {
     description: "Graduate engineer with experience in networks, telecommunications, and software development. Interested in innovative and technical projects.",
     navigationTitle: "Navigation",
     linksTitle: "Links",
+    emailLabel: "Email",
+    githubLabel: "GitHub",
+    linkedinLabel: "LinkedIn",
     topLabel: "Top",
   },
 };

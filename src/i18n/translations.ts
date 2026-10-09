@@ -1,3 +1,5 @@
+// EDIT THIS FILE for all visible portfolio text. Keep the fr and en sections in sync.
+
 export const translations = {
   fr: {
     nav: {
@@ -7,12 +9,17 @@ export const translations = {
       projects: "Projets",
       skills: "Compétences",
       contact: "Contact",
+      toEnglish: "FR -> EN",
+      toFrench: "EN -> FR",
+      menu: "Menu",
+      close: "Fermer",
     },
     hero: {
-      badge: "Master 2 Réseaux et Télécoms · Université Paris-Saclay",
+      status: "À la recherche d'un stage de 6 mois à partir de mars 2027",
+      badge: "Master 2 Multimedia Networking · Université Paris-Saclay & Institut Polytechnique de Paris",
       title1: "Walid",
       title2: "Kessoum",
-      subtitle1: "Étudiant Master 2, Réseaux et Télécommunications (voie apprentissage) à Université Paris-Saclay",
+      subtitle1: "Étudiant en Master 2 Multimedia Networking à l'Université Paris-Saclay & l'Institut Polytechnique de Paris",
       subtitle2: "Ingénieur d'État et Master en Systèmes de Télécommunications et Réseaux de l'ENSTA d'Alger",
       location: "Paris, Île-de-France",
       contact: "Me Contacter",
@@ -22,7 +29,7 @@ export const translations = {
       title: "À propos de moi",
       subtitle: "Passionné par les réseaux, la data et les télécommunications",
       description: "Ingénieur en Télécommunications et Réseaux, je suis passionné par l'optimisation des performances réseau et l'analyse de données. Mes centres d'intérêt incluent les réseaux LTE/5G, le Data Engineering, l'intelligence artificielle appliquée aux télécoms et le développement fullstack.",
-      description2: "Actuellement en Master 2 Réseaux et Télécoms à Université Paris-Saclay (voie apprentissage), je poursuis mon développement professionnel dans les télécommunications et le data engineering avec des projets innovants.",
+      description2: "Actuellement en Master 2 Multimedia Networking à l'Université Paris-Saclay & l'Institut Polytechnique de Paris, je me spécialise dans les réseaux multimédias, le traitement du signal, la compression et l'intelligence artificielle.",
       cards: {
         networks: { title: "Réseaux & Télécoms", desc: "LTE, 5G, FTTH, SCADA, VoIP, SDH, DWDM" },
         data: { title: "Data Engineering", desc: "ETL, Data Warehouse, Apache Airflow, PostgreSQL" },
@@ -35,10 +42,10 @@ export const translations = {
       subtitle: "Mon parcours académique",
       items: [
         {
-          degree: "Master 2 Réseaux et Télécoms (voie apprentissage)",
-          school: "Université Paris-Saclay",
-          location: "Paris, France",
-          period: "Sept. 2027 – en cours",
+          degree: "Master 2 Multimedia Networking",
+          school: "Université Paris-Saclay & Institut Polytechnique de Paris",
+          location: "Gif-sur-Yvette, France",
+          period: "Sept. 2026 – Sept. 2027",
         },
         {
           degree: "Cycle Ingénieur (2ème année), Spécialité Réseaux et Télécommunications",
@@ -118,61 +125,80 @@ export const translations = {
         },
       ],
     },
+    certifications: {
+      title: "Certifications",
+      subtitle: "Reconnaissance et certifications professionnelles",
+      viewLabel: "Voir le certificat",
+    },
     projects: {
       title: "Projets",
       subtitle: "Quelques réalisations marquantes",
+      caseLabel: "Étude de projet",
+      repositoryLabel: "Dépôt GitHub",
+      missingRepositoryLabel: "Ajouter le lien du dépôt GitHub",
       items: [
         {
+          id: "switchers-network",
           name: "SWITCHERS – Architecture Réseau d'Entreprise Résiliente",
           description: "Architecture multi-sites avec routage dynamique OSPF multi-zone, services DHCP/HTTP/Mail, NAT et accès Internet sécurisé. Simulation de panne de lien avec reconvergence OSPF automatique démontrant la continuité de service.",
           tags: ["Cisco", "Packet Tracer", "OSPF", "Routing", "Network Architecture"],
         },
         {
+          id: "lte-data-warehouse",
           name: "Data Warehouse LTE",
           description: "Architecture data warehouse pour centraliser les données réseau LTE avec ETL automatisé via Apache Airflow et modèles LSTM pour la prévision des KPIs.",
           tags: ["Python", "PostgreSQL", "Airflow", "LSTM", "PowerBI"],
         },
         {
+          id: "ai-insurance-platform",
           name: "Plateforme SaaS IA - Assurance",
           description: "Solution primée (3ème mondial Huawei ICT) automatisant le profilage de risque avec XGBoost déployé sur Huawei Cloud ModelArts.",
           tags: ["XGBoost", "Flask", "Huawei Cloud", "ModelArts"],
         },
         {
+          id: "arduino-temperature-sensor",
           name: "Temperature Sensing Using LM35 with Arduino",
           description: "Projet embarqué de mesure de température avec capteur LM35 et prototypage sur Arduino.",
           tags: ["Arduino", "Embedded", "Sensors", "C/C++"],
         },
         {
+          id: "giver-reincarnated",
           name: "THE GIVER REINCARNATED",
           description: "Bot Discord avec jeu interactif mettant en avant des mécanique de gameplay innovantes.",
           tags: ["Discord Bot", "Game", "Python"],
         },
         {
+          id: "aes-crypto",
           name: "AES Crypto",
           description: "Projet de cryptographie autour des principes AES et de la sécurisation des données.",
           tags: ["Cryptography", "AES", "Security"],
         },
         {
+          id: "django-library-management",
           name: "Library Management using Django",
           description: "Application Django de gestion de bibliothèque avec opérations CRUD et logique métier web.",
           tags: ["Django", "Python", "Web"],
         },
         {
+          id: "networking-programming",
           name: "Networking Programming",
           description: "Projet de programmation réseau implémentant les patterns de communication client-serveur avec sockets.",
           tags: ["Networking", "Sockets", "Python"],
         },
         {
+          id: "oop-python",
           name: "OOP Python",
           description: "Projet de programmation orientée objet en Python mettant en avant les hiérarchies de classes et les design patterns.",
           tags: ["Python", "OOP"],
         },
         {
+          id: "security-research-lab",
           name: "Security Research Lab",
           description: "Projet de recherche en sécurité explorant le comportement des malwares et les techniques défensives avancées.",
           tags: ["Security", "Research", "Analysis"],
         },
         {
+          id: "obsidian-second-brain",
           name: "Obsidian Second Brain",
           description: "Application web personnelle de journalisation et de gestion des connaissances pour la réflexion quotidienne.",
           tags: ["Knowledge", "Journaling", "Web"],
@@ -182,6 +208,7 @@ export const translations = {
     skills: {
       title: "Compétences et Technologies",
       subtitle: "Mon arsenal technique",
+      clusterLabel: "Groupe de compétences",
       categories: {
         programming: { title: "Langages de Programmation", items: ["Python", "SQL", "C/C++", "Java", "JavaScript", "MATLAB", "Assembly ARM"] },
         ml: { title: "Machine Learning & Data", items: ["XGBoost", "LSTM", "Random Forest", "Apache Airflow", "ETL", "Data Warehousing", "Pandas", "NumPy", "Scikit-learn"] },
@@ -201,12 +228,17 @@ export const translations = {
       projects: "Projects",
       skills: "Skills",
       contact: "Contact",
+      toEnglish: "FR -> EN",
+      toFrench: "EN -> FR",
+      menu: "Menu",
+      close: "Close",
     },
     hero: {
-      badge: "Master's 2 Networks & Telecommunications · Université Paris-Saclay",
+      status: "Looking for a 6-month internship starting March 2027",
+      badge: "Master's 2 Multimedia Networking · Université Paris-Saclay & Institut Polytechnique de Paris",
       title1: "Walid",
       title2: "Kessoum",
-      subtitle1: "Master's Student, Networks & Telecommunications (Work-Study Track) at Université Paris-Saclay",
+      subtitle1: "Master's student in Multimedia Networking at Université Paris-Saclay & Institut Polytechnique de Paris",
       subtitle2: "State Engineer & Master's in Telecommunications Systems and Networks from ENSTA, Algiers",
       location: "Paris, Île-de-France",
       contact: "Contact Me",
@@ -216,7 +248,7 @@ export const translations = {
       title: "About Me",
       subtitle: "Passionate about networks, data and telecommunications",
       description: "Telecommunications and Networks Engineer, passionate about network performance optimization and data analysis. My interests include LTE/5G networks, Data Engineering, AI applied to telecoms, and fullstack development.",
-      description2: "Currently pursuing a Master's in Networks & Telecommunications at Université Paris-Saclay (work-study program), I continue to develop professionally in telecommunications and data engineering with innovative projects.",
+      description2: "Currently pursuing a Master's in Multimedia Networking at Université Paris-Saclay & Institut Polytechnique de Paris, specializing in multimedia networks, signal processing, compression, and artificial intelligence.",
       cards: {
         networks: { title: "Networks & Telecoms", desc: "LTE, 5G, FTTH, SCADA, VoIP, SDH, DWDM" },
         data: { title: "Data Engineering", desc: "ETL, Data Warehouse, Apache Airflow, PostgreSQL" },
@@ -229,10 +261,10 @@ export const translations = {
       subtitle: "My academic background",
       items: [
         {
-          degree: "Master's 2 Networks & Telecommunications (Work-Study Track)",
-          school: "Université Paris-Saclay",
-          location: "Paris, France",
-          period: "Sept. 2027 – Present",
+          degree: "Master's 2 Multimedia Networking",
+          school: "Université Paris-Saclay & Institut Polytechnique de Paris",
+          location: "Gif-sur-Yvette, France",
+          period: "Sept. 2026 – Sept. 2027",
         },
         {
           degree: "Engineering Degree (2nd year), Networks & Telecommunications",
@@ -312,61 +344,80 @@ export const translations = {
         },
       ],
     },
+    certifications: {
+      title: "Certifications",
+      subtitle: "Recognized achievements and professional credentials",
+      viewLabel: "View certificate",
+    },
     projects: {
       title: "Projects",
       subtitle: "Notable achievements",
+      caseLabel: "Project Case",
+      repositoryLabel: "GitHub repository",
+      missingRepositoryLabel: "Add GitHub repository link",
       items: [
         {
+          id: "switchers-network",
           name: "SWITCHERS – Resilient Enterprise Network Architecture",
           description: "Multi-site architecture with dynamic OSPF multi-area routing, DHCP/HTTP/Mail services, NAT, and secure Internet access. Link failure simulation with automatic OSPF reconvergence demonstrating service continuity.",
           tags: ["Cisco", "Packet Tracer", "OSPF", "Routing", "Network Architecture"],
         },
         {
+          id: "lte-data-warehouse",
           name: "LTE Data Warehouse",
           description: "Data warehouse architecture to centralize LTE network data with automated ETL via Apache Airflow and LSTM models for KPI forecasting.",
           tags: ["Python", "PostgreSQL", "Airflow", "LSTM", "PowerBI"],
         },
         {
+          id: "ai-insurance-platform",
           name: "AI SaaS Platform - Insurance",
           description: "Award-winning solution (3rd globally at Huawei ICT) automating risk profiling with XGBoost deployed on Huawei Cloud ModelArts.",
           tags: ["XGBoost", "Flask", "Huawei Cloud", "ModelArts"],
         },
         {
+          id: "arduino-temperature-sensor",
           name: "Temperature Sensing Using LM35 with Arduino",
           description: "Embedded temperature sensing project using an LM35 sensor with Arduino prototyping.",
           tags: ["Arduino", "Embedded", "Sensors", "C/C++"],
         },
         {
+          id: "giver-reincarnated",
           name: "THE GIVER REINCARNATED",
           description: "Discord bot with interactive game featuring innovative gameplay mechanics.",
           tags: ["Discord Bot", "Game", "Python"],
         },
         {
+          id: "aes-crypto",
           name: "AES Crypto",
           description: "Cryptography project around AES principles and practical secure data handling.",
           tags: ["Cryptography", "AES", "Security"],
         },
         {
+          id: "django-library-management",
           name: "Library Management using Django",
           description: "Django-based library management application with CRUD workflows and web business logic.",
           tags: ["Django", "Python", "Web"],
         },
         {
+          id: "networking-programming",
           name: "Networking Programming",
           description: "Network programming project implementing socket-based client-server communication patterns.",
           tags: ["Networking", "Sockets", "Python"],
         },
         {
+          id: "oop-python",
           name: "OOP Python",
           description: "Object-oriented Python project showcasing class hierarchies and design patterns.",
           tags: ["Python", "OOP"],
         },
         {
+          id: "security-research-lab",
           name: "Security Research Lab",
           description: "Security research and analysis project exploring malware behavior and advanced defensive techniques.",
           tags: ["Security", "Research", "Analysis"],
         },
         {
+          id: "obsidian-second-brain",
           name: "Obsidian Second Brain",
           description: "Personal journaling and knowledge management web application for daily reflection and learning.",
           tags: ["Knowledge", "Journaling", "Web"],
@@ -376,6 +427,7 @@ export const translations = {
     skills: {
       title: "Skills & Technologies",
       subtitle: "My technical arsenal",
+      clusterLabel: "Capability Cluster",
       categories: {
         programming: { title: "Programming Languages", items: ["Python", "SQL", "C/C++", "Java", "JavaScript", "MATLAB", "Assembly ARM"] },
         ml: { title: "Machine Learning & Data", items: ["XGBoost", "LSTM", "Random Forest", "Apache Airflow", "ETL", "Data Warehousing", "Pandas", "NumPy", "Scikit-learn"] },

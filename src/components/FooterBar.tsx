@@ -1,5 +1,6 @@
 import { useLanguage } from "@/i18n/LanguageContext";
-import { footerContent, personalInfo, sectionIds } from "@/data/siteContent";
+import { sectionIds, footerContent } from "@/data/siteContent";
+import { personalInfo } from "@/data/portfolioContent";
 import { Github, Linkedin, Mail, ArrowUpRight } from "lucide-react";
 
 const FooterBar = () => {
@@ -30,13 +31,13 @@ const FooterBar = () => {
           <p className="pixel-small mb-3 text-muted-foreground">{footerContent[lang].linksTitle}</p>
           <div className="flex flex-wrap gap-3">
             <a href={`mailto:${personalInfo.email}`} className="pixel-btn-secondary inline-flex items-center gap-2 px-3 py-1">
-              <Mail className="h-4 w-4" /> Email
+              <Mail className="h-4 w-4" /> {footerContent[lang].emailLabel}
             </a>
             <a href={personalInfo.github} target="_blank" rel="noopener noreferrer" className="pixel-btn-secondary inline-flex items-center gap-2 px-3 py-1">
-              <Github className="h-4 w-4" /> GitHub
+              <Github className="h-4 w-4" /> {footerContent[lang].githubLabel}
             </a>
             <a href={personalInfo.linkedin} target="_blank" rel="noopener noreferrer" className="pixel-btn-secondary inline-flex items-center gap-2 px-3 py-1">
-              <Linkedin className="h-4 w-4" /> LinkedIn
+              <Linkedin className="h-4 w-4" /> {footerContent[lang].linkedinLabel}
             </a>
             <a href="#hero" onClick={(e) => { e.preventDefault(); goTo("hero"); }} className="pixel-btn-secondary inline-flex items-center gap-2 px-3 py-1">
               <ArrowUpRight className="h-4 w-4" /> {footerContent[lang].topLabel}

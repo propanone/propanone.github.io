@@ -1,5 +1,6 @@
 import { useLanguage } from "@/i18n/LanguageContext";
 import { motion } from "framer-motion";
+import { ChevronDown } from "lucide-react";
 import {
   certificationItems,
   defaultPortfolioIcon,
@@ -40,7 +41,8 @@ const ExperienceSection = () => {
                  transition={{ delay: i * 0.06, duration: 0.32, ease: "easeOut" }}
                   className="card-glass p-6"
                 >
-                  <div className="flex gap-4">
+                <details open={i === 0} className="group">
+                  <summary className="flex cursor-pointer list-none gap-4 [&::-webkit-details-marker]:hidden">
                     <div className="org-logo overflow-hidden bg-white p-1">
                       <img
                         src={withBase(placeholder)}
@@ -49,13 +51,20 @@ const ExperienceSection = () => {
                       />
                     </div>
                     <div className="flex-1">
-                      <div className="mb-3 flex flex-wrap items-start justify-between gap-2">
+                      <div className="flex flex-wrap items-start justify-between gap-2">
                         <div>
                           <h3 className="font-semibold">{item.role}</h3>
                           <p className="text-primary">{item.company}</p>
                         </div>
-                        <p className="text-base text-muted-foreground">{item.location} • {item.period}</p>
+                        <div className="flex items-center gap-2 sm:gap-3">
+                          <p className="text-right text-sm text-muted-foreground sm:text-base">{item.location} • {item.period}</p>
+                          <ChevronDown className="h-5 w-5 flex-shrink-0 text-primary transition-transform group-open:rotate-180" />
+                        </div>
                       </div>
+                    </div>
+                  </summary>
+
+                  <div className="mt-5 pl-16">
                       <ul className="space-y-2">
                         {item.tasks.map((task, j) => (
                           <li key={j} className="flex gap-2 text-base text-muted-foreground">
@@ -79,9 +88,9 @@ const ExperienceSection = () => {
                           ))}
                         </div>
                       )}
-                    </div>
                   </div>
-                </motion.div>
+                </details>
+              </motion.div>
               );
             })}
           </div>
@@ -97,8 +106,8 @@ const ExperienceSection = () => {
             transition={{ duration: 0.35, ease: "easeOut" }}
             className="mb-12 text-center"
           >
-            <h2 className="terminal-title mb-3 text-3xl font-bold md:text-4xl">Certifications</h2>
-            <p className="text-xl text-muted-foreground">Recognized achievements and professional credentials</p>
+            <h2 className="terminal-title mb-3 text-3xl font-bold md:text-4xl">{t.certifications.title}</h2>
+            <p className="text-xl text-muted-foreground">{t.certifications.subtitle}</p>
           </motion.div>
           <div className="space-y-4">
             {certificationItems.map((cert, i) => (
@@ -133,7 +142,7 @@ const ExperienceSection = () => {
                       rel="noopener noreferrer"
                       className="pixel-btn-secondary px-3 py-1"
                     >
-                      View certificate
+                      {t.certifications.viewLabel}
                     </a>
                   </div>
                 </div>

@@ -2,6 +2,10 @@
 
 Personal portfolio built with React, TypeScript, Vite, and Tailwind CSS.
 
+## Editing The Portfolio
+
+New to the codebase? Start with [EDITING.md](EDITING.md). It explains exactly where to change text, links, documents, images, and colors without needing to understand the React components.
+
 ## Run Locally
 
 ```bash
@@ -25,7 +29,7 @@ This repository deploys automatically with GitHub Actions.
 3. Push to main.
 4. The workflow at .github/workflows/deploy-pages.yml builds and deploys dist/.
 
-## Content Placeholders
+## Content And Assets
 
 The UI contains explicit placeholder paths for logos and visuals:
 
@@ -34,7 +38,7 @@ The UI contains explicit placeholder paths for logos and visuals:
 - Certification logos: public/icons/certifications/
 - Project visuals: public/icons/projects/
 
-Create those folders under public/icons/ and add your files with the names shown directly in each card on the website.
+Create those folders under `public/icons/` and update the corresponding paths in `src/data/portfolioContent.ts`.
 
 ## Documents and Project Links
 
@@ -48,7 +52,7 @@ Project cards include slots for:
 - PFE thesis PDF
 - Certification links
 
-Update the placeholder URLs in src/components/ProjectsSection.tsx and src/components/ExperienceSection.tsx.
+Update the URLs in `src/data/portfolioContent.ts`. The section components should generally not need editing for content changes.
 
 ## Tech Stack
 

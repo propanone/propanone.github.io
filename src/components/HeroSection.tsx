@@ -1,15 +1,15 @@
 import { useLanguage } from "@/i18n/LanguageContext";
 import { motion } from "framer-motion";
-import profileImg from "@/assests/profile.jpg";
+import profileImg from "@/assests/profile.JPG";
 import { Mail, Phone, MapPin, Github, Linkedin } from "lucide-react";
-import { personalInfo } from "@/data/siteContent";
+import { personalInfo } from "@/data/portfolioContent";
 
 const HeroSection = () => {
   const { t } = useLanguage();
 
   return (
     <section id="hero" className="relative overflow-hidden border-b-2 border-border pt-24">
-      <div className="mx-auto flex min-h-[88vh] max-w-6xl flex-col-reverse items-center gap-12 px-6 py-16 md:flex-row md:py-24">
+      <div className="mx-auto flex min-h-[88vh] max-w-6xl flex-col items-center gap-12 px-6 py-16 md:flex-row md:py-24">
         {/* Left */}
         <motion.div
           initial={{ opacity: 0, x: -40 }}
@@ -17,14 +17,19 @@ const HeroSection = () => {
           transition={{ duration: 0.35, ease: "easeOut" }}
           className="flex-1"
         >
+          <div className="mb-5 flex flex-wrap items-center gap-3">
+            <span className="status-pulse" aria-hidden="true" />
+            <span className="pixel-small text-accent">{t.hero.status}</span>
+          </div>
+
           <span className="section-eyebrow">{t.hero.badge}</span>
 
           <h1 className="terminal-title mb-6 text-4xl font-extrabold leading-tight md:text-6xl lg:text-7xl">
             {t.hero.title1} <span className="text-gradient">{t.hero.title2}</span>
           </h1>
 
-          <p className="mb-3 max-w-2xl text-lg text-muted-foreground md:text-xl">- {t.hero.subtitle1}</p>
-          <p className="mb-6 max-w-2xl text-lg text-muted-foreground md:text-xl">- {t.hero.subtitle2}</p>
+          <p className="mb-3 max-w-2xl text-lg text-muted-foreground md:text-xl">{t.hero.subtitle1}</p>
+          <p className="mb-6 max-w-2xl text-lg text-muted-foreground md:text-xl">{t.hero.subtitle2}</p>
 
           <div className="mb-8 flex flex-wrap items-center gap-4 text-base text-muted-foreground">
             <a href={`mailto:${personalInfo.email}`} className="pixel-small inline-flex items-center gap-2 transition-colors hover:text-primary">
@@ -77,7 +82,7 @@ const HeroSection = () => {
           <div className="relative h-72 w-72 overflow-hidden border-2 border-primary glow md:h-96 md:w-80">
             <img
               src={profileImg}
-              alt="Walid Kessoum"
+              alt={`${personalInfo.name} profile photo`}
               className="h-full w-full object-cover"
             />
           </div>
