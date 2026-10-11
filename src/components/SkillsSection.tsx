@@ -11,7 +11,7 @@ const SkillBadge = ({ name }: { name: string }) => {
         <img
           src={logo}
           alt={`${name} logo`}
-          className="h-3.5 w-3.5 flex-shrink-0 object-contain"
+          className="h-5 w-5 flex-shrink-0 rounded-sm bg-background p-0.5 object-contain"
           loading="lazy"
           decoding="async"
         />

@@ -27,7 +27,6 @@ export type PortfolioProjectMeta = {
   oneLiner: string;
   github: string;
   visual: string;
-  resources: PortfolioLink[];
 };
 
 export const defaultPortfolioIcon = "favicon.png";
@@ -39,6 +38,7 @@ export const quickTechStack = [
   { label: "Docker", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
   { label: "5G", icon: "https://cdn.simpleicons.org/cisco/1ba0d7" },
   { label: "Cloud", icon: "https://cdn.simpleicons.org/googlecloud/4285f4" },
+  { label: "Matlab", icon: "https://www.svgrepo.com/show/373830/matlab.svg" },
 ];
 
 export const skillLogoByName: Record<string, string> = {
@@ -49,7 +49,7 @@ export const skillLogoByName: Record<string, string> = {
   JavaScript: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
   MATLAB: "https://cdn.simpleicons.org/mathworks/e16737",
   "Assembly ARM": "https://cdn.simpleicons.org/arm/00adef",
-  XGBoost: "https://cdn.simpleicons.org/xgboost/ffffff",
+  XGBoost: "https://cdn.simpleicons.org/xgboost/3f6f9f",
   LSTM: "https://cdn.simpleicons.org/tensorflow/ff6f00",
   "Random Forest": "https://cdn.simpleicons.org/scikitlearn/f7931e",
   "Apache Airflow": "https://cdn.simpleicons.org/apacheairflow/17b0eb",
@@ -108,6 +108,7 @@ export const categoryDescriptions = {
 } as const;
 
 export const educationLogoBySchoolKeyword: Record<string, string> = {
+  "Paris-Saclay": "icons/education/saclay.png",
   "Sup Galilée": "icons/education/sup-galilee.png",
   "Sup Galilee": "icons/education/sup-galilee.png",
   Sorbonne: "icons/education/sup-galilee.png",
@@ -195,97 +196,48 @@ export const projectMetaByName: Record<string, PortfolioProjectMeta> = {
   "Data Warehouse LTE": {
     oneLiner: "Centralized LTE data platform for KPI monitoring, ETL automation, and forecasting.",
     github: "https://github.com/propanone/A-Data-Driven-Framework-for-AI-Powered-LTE-Network-Performance-Optimizati",
-    visual: "icons/projects/docker-logo.png",
-    resources: [
-      { label: "Project report (PDF)", url: "pfe-thesis.pdf" },
-      { label: "Stage report", url: "rapport-djezzy.pdf" },
-    ],
+    visual: "icons/projects/kpi.png",
   },
   "LTE Data Warehouse": {
     oneLiner: "Centralized LTE data platform for KPI monitoring, ETL automation, and forecasting.",
     github: "https://github.com/propanone/A-Data-Driven-Framework-for-AI-Powered-LTE-Network-Performance-Optimizati",
-    visual: "icons/projects/docker-logo.png",
-    resources: [
-      { label: "Project report (PDF)", url: "pfe-thesis.pdf" },
-      { label: "Technical report (PDF)", url: "master-thesis.pdf" },
-      { label: "Internship report", url: "rapport-djezzy.pdf" },
-    ],
+    visual: "icons/projects/kpi.png",
   },
   "Plateforme SaaS IA - Assurance": {
     oneLiner: "AI-assisted underwriting workflow powered by XGBoost and cloud-native serving.",
     github: "https://github.com/propanone/UI_DSIP",
-    visual: "icons/projects/docker-logo.png",
-    resources: [
-      { label: "PPT documentation", url: "ict-slides.pdf" },
-      { label: "DSIP certification", url: "dsip-certification.pdf" },
-      { label: "Competition certificate", url: "huawei-ict-competition-certificate.pdf" },
-
-    ],
+    visual: "icons/projects/ict.png",
   },
 
   "SWITCHERS – Resilient Enterprise Network Architecture": {
     oneLiner: "Multi-site enterprise network with OSPF multi-area routing, DHCP, NAT, and automatic failover.",
     github: "https://github.com/propanone/switchers-network-architecture",
-    visual: "icons/projects/cisco-packet-tracer.png",
-    resources: [
-      { label: "Cisco Packet Tracer Project", url: "switchers-network.pkt" },
-    ],
+    visual: "icons/projects/cisco.png",
   },
   "SCADA/VoIP Network Analysis": {
     oneLiner: "Industrial network analysis project with reliability and latency diagnostics.",
     github: "https://github.com/propanone/scada-voip-analysis",
     visual: "icons/experience/sonatrach.png",
-    resources: [
-      { label: "Project report (PDF)", url: "rapport-stage-sonatrach.pdf" },
-    ],
   },
   "Temperature Sensing Using LM35 with Arduino": {
     oneLiner: "Embedded temperature sensing prototype using Arduino and LM35 sensor integration.",
     github: "https://github.com/propanone/Temperature-Sensing-Using-LM35-with-Arduino",
-    visual: "favicon.png",
-    resources: [],
-  },
-  "THE GIVER REINCARNATED": {
-    oneLiner: "Discord bot game featuring unique gameplay mechanics and interactive features.",
-    github: "https://github.com/propanone/THE-GIVER-REINCARNATED",
-    visual: "favicon.png",
-    resources: [],
+    visual: "icons/projects/arduino.png",
   },
   "AES Crypto": {
     oneLiner: "Cryptography project implementing AES concepts and secure data handling patterns.",
     github: "https://github.com/propanone/AES-Crypto",
-    visual: "favicon.png",
-    resources: [],
+    visual: "icons/projects/aes.png",
   },
   "Library Management using Django": {
     oneLiner: "Django-based library management system with CRUD workflows and user operations.",
     github: "https://github.com/propanone/Library-Management-using-Django",
-    visual: "favicon.png",
-    resources: [],
-  },
-  "Networking Programming": {
-    oneLiner: "Network programming project implementing socket-based client-server communication patterns.",
-    github: "https://github.com/propanone/Networking-Programming",
-    visual: "favicon.png",
-    resources: [],
-  },
-  "OOP Python": {
-    oneLiner: "Object-oriented Python project showcasing class hierarchies and design patterns.",
-    github: "https://github.com/propanone/OOP-Python",
-    visual: "favicon.png",
-    resources: [],
-  },
-  "Security Research Lab": {
-    oneLiner: "Security research and analysis project exploring malware behavior and defensive techniques.",
-    github: "https://github.com/propanone/malwaredev",
-    visual: "favicon.png",
-    resources: [],
+    visual: "icons/projects/django.png",
   },
   "Obsidian Second Brain": {
     oneLiner: "Personal journaling and second brain web application for knowledge management and daily reflection.",
     github: "https://github.com/propanone/obsidian",
-    visual: "favicon.png",
-    resources: [],
+    visual: "icons/projects/obsidian.png",
   },
 };
 
@@ -294,11 +246,7 @@ export const projectMetaById: Record<string, PortfolioProjectMeta> = {
   "lte-data-warehouse": projectMetaByName["LTE Data Warehouse"],
   "ai-insurance-platform": projectMetaByName["Plateforme SaaS IA - Assurance"],
   "arduino-temperature-sensor": projectMetaByName["Temperature Sensing Using LM35 with Arduino"],
-  "giver-reincarnated": projectMetaByName["THE GIVER REINCARNATED"],
   "aes-crypto": projectMetaByName["AES Crypto"],
   "django-library-management": projectMetaByName["Library Management using Django"],
-  "networking-programming": projectMetaByName["Networking Programming"],
-  "oop-python": projectMetaByName["OOP Python"],
-  "security-research-lab": projectMetaByName["Security Research Lab"],
   "obsidian-second-brain": projectMetaByName["Obsidian Second Brain"],
 };

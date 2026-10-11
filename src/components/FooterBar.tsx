@@ -13,7 +13,6 @@ const FooterBar = () => {
       <div className="mx-auto grid max-w-6xl gap-8 px-6 py-10 md:grid-cols-3">
         <div>
           <p className="text-lg font-semibold text-foreground">{personalInfo.name}</p>
-          <p className="mt-2 text-sm text-muted-foreground">{footerContent[lang].description}</p>
         </div>
 
         <div>

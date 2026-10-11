@@ -43,7 +43,7 @@ const ProjectsSection = () => {
                     <img
                       src={withBase(meta.visual)}
                       alt={`${project.name} visual`}
-                      className="mb-4 h-16 w-16 object-contain"
+                      className="mb-6 h-52 w-full rounded-sm border-2 border-border bg-card object-cover p-2 md:h-64"
                       loading="lazy"
                       decoding="async"
                     />
@@ -79,17 +79,6 @@ const ProjectsSection = () => {
                       </span>
                     )}
 
-                    {(meta?.resources ?? []).map((resource) => (
-                      <a
-                        key={resource.label}
-                        href={withBase(resource.url)}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="pixel-btn-secondary px-3 py-1"
-                      >
-                        {resource.label}
-                      </a>
-                    ))}
                   </div>
                 </div>
               </motion.article>

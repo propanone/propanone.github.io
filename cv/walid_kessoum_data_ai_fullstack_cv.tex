@@ -1,0 +1,172 @@
+\documentclass[a4paper,10pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=0.65in]{geometry}
+\usepackage{titlesec}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{tabularx}
+\usepackage{fancyhdr}
+\usepackage{array}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{3pt}
+\setlength{\tabcolsep}{0pt}
+\raggedbottom
+\raggedright
+
+\definecolor{accent}{HTML}{7C3AED}
+\definecolor{accent2}{HTML}{06B6D4}
+\definecolor{textmain}{HTML}{111827}
+\definecolor{textsoft}{HTML}{4B5563}
+
+\titleformat{\section}{\vspace{-2pt}\scshape\large\bfseries\color{accent}}{}{0em}{}[\color{accent2}\titlerule\vspace{-4pt}]
+
+\pdfgentounicode=1
+
+\graphicspath{{old_hag/assets/}{../old_hag/assets/}{public/}{../public/}{src/assests/logos/}{../src/assests/logos/}{./}}
+
+\newcommand{\resumeItem}[1]{\item\small{#1\vspace{-2pt}}}
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{#2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+\newcommand{\resumeProjectHeading}[2]{
+  \item
+    \begin{tabular*}{0.98\textwidth}{l@{\extracolsep{\fill}}r}
+      \small\textbf{#1} & \small #2 \\
+    \end{tabular*}\vspace{-6pt}
+}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in,label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=*,itemsep=2pt,topsep=2pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-4pt}}
+
+\begin{document}
+
+\begin{minipage}[c]{0.18\textwidth}
+  \includegraphics[width=\linewidth,height=3.6cm,keepaspectratio]{Photo.png}
+\end{minipage}
+\hfill
+\begin{minipage}[c]{0.78\textwidth}
+  \begin{center}
+    {\LARGE \textbf{\textcolor{textmain}{Walid Kessoum}}}\\[3pt]
+    {\large \textcolor{accent}{Data Engineer \;\textbullet\; AI \;\textbullet\; Fullstack Developer}}\\[8pt]
+    {\small Paris, Île-de-France $|$ +33\,7\,46\,50\,54\,37 $|$ \href{mailto:mw.kessoum@icloud.com}{mw.kessoum@icloud.com} $|$ \href{https://github.com/propanone}{GitHub} $|$ \href{https://propanone.github.io/}{Portfolio}}\\[8pt]
+    {\small Ingénieur télécoms avec un profil fort en data engineering, IA appliquée, automatisation et développement fullstack. Je conçois des plateformes orientées données, des pipelines ETL, des dashboards et des solutions ML pour des contextes industriels et métier.}
+  \end{center}
+\end{minipage}
+
+\vspace{4pt}
+
+\section{Compétences Data, IA \& Développement}
+\begin{itemize}[leftmargin=0.16in,label={}]
+  \small{\item{
+    \textbf{Data engineering}{: PostgreSQL, SQL, ETL, Apache Airflow, Data Warehousing, KPI engineering, orchestration de pipelines} \\
+    \textbf{Machine learning}{: LSTM, XGBoost, Random Forest, prévision temporelle, classification, scoring, analyse de performance} \\
+    \textbf{Fullstack \& web}{: Django, Flask, JavaScript, HTML/CSS, interfaces métier, API, dashboards, automatisation web} \\
+    \textbf{Outils \& infrastructure}{: Python, Docker, Linux, Git, PowerBI, pandas, NumPy, scikit-learn, Huawei Cloud, ModelArts} \\
+    \textbf{Base technique}{: réseaux LTE/5G, SCADA, VoIP, FTTH, ce contexte sert d'expertise métier pour les produits data orientés télécoms} \\
+    \textbf{Langues}{: Français (courant) \; $\cdot$ \; Anglais (courant) \; $\cdot$ \; Arabe (natif)
+  }}
+\end{itemize}
+
+\section{Formation}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Université Paris-Saclay \& Institut Polytechnique de Paris}{Gif-sur-Yvette, France}
+    {Master 2 Multimedia Networking}{Sept. 2026 -- Sept. 2027}
+  \resumeSubheading
+    {Sup Galilée -- Université Sorbonne Paris Nord}{Paris, France}
+    {Cycle Ingénieur (2\textsuperscript{ème} année), Réseaux et Télécommunications}{Sept. 2025 -- Juin 2026}
+  \resumeSubheading
+    {ENSTA -- École Nationale Supérieure de Technologie Avancée}{Alger, Algérie}
+    {Ingénieur d'État \& Master en Systèmes de Télécommunications et Réseaux}{Oct. 2020 -- Juin 2025}
+    \resumeItemListStart
+      \resumeItem{Projet de Fin d'Études : \textit{A Data-Driven Framework for AI-Powered LTE Network Performance Optimization}}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+\section{Expérience Professionnelle}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Djezzy}{Oct. 2024 -- Mai 2025}
+    {Ingénieur Data \& Performance Réseau (Alternance)}{Alger, Algérie}
+    \resumeItemListStart
+      \resumeItem{Conçu un Data Warehouse PostgreSQL centralisant les données LTE (RAN \& Core) et automatisé les pipelines ETL avec Python et Apache Airflow}
+      \resumeItem{Développé des modèles LSTM pour la prévision des KPIs critiques du réseau et l'analyse des tendances temporelles}
+      \resumeItem{Créé une solution fullstack et analytique (Django/Flask + PowerBI) pour la supervision réseau et la prise de décision}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {Huawei ICT Competition}{Mai 2025}
+    {Lauréat Mondial (3\textsuperscript{ème} Prix) -- Innovation Track}{Shenzhen, Chine}
+    \resumeItemListStart
+      \resumeItem{Développé une plateforme SaaS d'IA pour l'assurance avec XGBoost sur Huawei Cloud ModelArts}
+      \resumeItem{Construit un pitch technique en anglais et classé 3\textsuperscript{ème} sur 150\,000+ participants}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {SONATRACH}{Fév. 2024 -- Avr. 2024}
+    {Analyste Réseau (Stage)}{Alger, Algérie}
+    \resumeItemListStart
+      \resumeItem{Analyse de réseaux industriels SCADA et VoIP avec lecture de contraintes terrain et fiabilité}
+      \resumeItem{Automatisation de traitements et diagnostics avec Python}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+\section{Projets Data \& Fullstack Sélectionnés}
+\resumeSubHeadingListStart
+  \resumeProjectHeading
+    {\textbf{Data Warehouse LTE -- KPI Analytics Platform}}{Projet de Master}
+    \resumeItemListStart
+      \resumeItem{Plateforme centralisée pour l'agrégation des KPI LTE, l'automatisation ETL et la visualisation de performance}
+      \resumeItem{Cas d'usage orienté data engineering industriel, LSTM et monitoring opérationnel}
+    \resumeItemListEnd
+
+  \resumeProjectHeading
+    {\textbf{Plateforme SaaS IA -- Assurance}}{Huawei ICT Competition}
+    \resumeItemListStart
+      \resumeItem{Workflow d'underwriting assisté par IA, XGBoost et serving cloud-native}
+    \resumeItemListEnd
+
+  \resumeProjectHeading
+    {\textbf{Obsidian Second Brain}}{Produit personnel / web app}
+    \resumeItemListStart
+      \resumeItem{Application web de journalisation et de gestion des connaissances axée productivité et organisation personnelle}
+    \resumeItemListEnd
+
+  \resumeProjectHeading
+    {\textbf{Library Management using Django}}{Projet web}
+    \resumeItemListStart
+      \resumeItem{Application Django avec CRUD, logique métier et gestion de workflow utilisateur}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+\section{Certifications \& Distinctions}
+\resumeSubHeadingListStart
+  \resumeProjectHeading
+    {\textbf{Huawei ICT Competition -- Global Winner (3\textsuperscript{ème} Prix)}}{2025}
+    \resumeItemListStart
+      \resumeItem{Reconnaissance mondiale pour excellence technique en innovation réseau, cloud et IA}
+    \resumeItemListEnd
+
+  \resumeProjectHeading
+    {\textbf{Google Cybersecurity, Google IT Automation with Python, Google IT Support}}{2022 -- 2024}
+    \resumeItemListStart
+      \resumeItem{Socle complémentaire en sécurité, scripting et support, utile pour les produits data et les plateformes web}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+\end{document}

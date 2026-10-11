@@ -33,17 +33,14 @@ const Navbar = () => {
               {t.nav[key]}
             </button>
           ))}
-          <button
-            onClick={() => scrollTo("contact")}
-            className="pixel-btn"
-          >
+          <a href={`mailto:${personalInfo.email}`} className="pixel-btn">
             {t.nav.contact}
-          </button>
+          </a>
           <button
             onClick={() => setLang(lang === "fr" ? "en" : "fr")}
             className="pixel-btn-secondary"
           >
-            {lang === "fr" ? t.nav.toEnglish : t.nav.toFrench}
+            {lang === "fr" ? "EN" : "FR"}
           </button>
           <button
             onClick={toggleTheme}
@@ -61,7 +58,7 @@ const Navbar = () => {
             onClick={() => setLang(lang === "fr" ? "en" : "fr")}
             className="pixel-btn-secondary px-2 py-1"
           >
-            {lang === "fr" ? t.nav.toEnglish : t.nav.toFrench}
+            {lang === "fr" ? "EN" : "FR"}
           </button>
           <button
             onClick={toggleTheme}
@@ -91,12 +88,9 @@ const Navbar = () => {
               {t.nav[key]}
             </button>
           ))}
-          <button
-            onClick={() => scrollTo("contact")}
-            className="pixel-btn mt-2 w-full"
-          >
+          <a href={`mailto:${personalInfo.email}`} className="pixel-btn mt-2 block w-full text-center">
             {t.nav.contact}
-          </button>
+          </a>
         </div>
       )}
     </nav>
