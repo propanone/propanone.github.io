@@ -6,7 +6,7 @@ This is the quick reference for adding or replacing images and documents.
 
 | Asset | Folder | Example |
 | --- | --- | --- |
-| Profile photo | `src/assests/` | `profile.JPG` |
+| Profile photo | `src/assests/` | `profile.jpg` |
 | University logos | `public/icons/education/` | `sup-galilee.png` |
 | Company logos | `public/icons/experience/` | `djezzy.png` |
 | Certification icons | `public/icons/certifications/` | `google-g.png` |
@@ -18,7 +18,7 @@ Use simple lowercase filenames with hyphens. Avoid spaces, accents, and duplicat
 
 ## Replacing the profile photo
 
-Replace `src/assests/profile.JPG` with your new photo using the same filename. Keep the image reasonably small; ideally use JPG or WebP under 500 KB.
+Replace `src/assests/profile.jpg` with your new photo using the same filename. Keep the image reasonably small; ideally use JPG or WebP under 500 KB.
 
 ## Adding a university logo
 

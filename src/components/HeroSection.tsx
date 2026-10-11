@@ -1,6 +1,6 @@
 import { useLanguage } from "@/i18n/LanguageContext";
 import { motion } from "framer-motion";
-import profileImg from "@/assests/profile.JPG";
+import profileImg from "@/assests/profile.jpg";
 import { Mail, Phone, MapPin, Github, Linkedin } from "lucide-react";
 import { personalInfo } from "@/data/portfolioContent";
 
